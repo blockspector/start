@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KindaCode.com</title>
+
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            height: 1000vh;
+            transition: background 2s ease;
+        }
+
+        .content {
+            padding: 50px;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Welcome to KindaCode.com</h1>
+    </div>
+
+    <script>
+        var body = document.getElementsByTagName('body')[0];
+        body.style.backgroundColor = 'white';
+
+        // trigger this function every time the user scrolls
+        window.onscroll = function (event) {
+            var scroll = window.pageYOffset;
+            if (scroll < 300) {
+                // green
+                body.style.backgroundColor = 'white';
+            } else if (scroll >= 300 && scroll < 4000) {
+
+                body.style.backgroundColor = 'white';
+            } else if (scroll >= 4000 && scroll < 7000) {
+                // orange
+                body.style.backgroundColor = 'blue';
+            } else if (scroll >= 7000 && scroll < 9000) {
+     
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+<div data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="0" class="container4p-2 d-flex bd-highlight justify-content-center"><img src="./TextWBorder.png" 
+    style="width: 320px;
+   position: sticky;
+  transform: translate(42px, 18px);
+    "></div>

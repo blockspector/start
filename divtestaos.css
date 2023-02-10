@@ -1,0 +1,12 @@
+.div {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1cd8d2, #1002d7);
+    color: rgb(27, 2, 216);
+    margin: 100px 0;
+    border-radius: 7px;
+    }

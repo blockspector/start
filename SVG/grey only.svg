@@ -1,0 +1,25 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="200.86" height="35.74" viewBox="0 0 200.86 35.74">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 32px;
+        fill: #e0e0e0;
+        font-family: BRCobane-SemiBold, BR Cobane;
+        font-weight: 600;
+      }
+
+      .cls-2 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-3 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: -0.01em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 27.2)">Bloc<tspan class="cls-2" x="64.83" y="0">k</tspan><tspan x="81.37" y="0">spe</tspan><tspan class="cls-3" x="133.41" y="0">c</tspan><tspan class="cls-4" x="150.94" y="0">t</tspan><tspan x="162.53" y="0">or </tspan></text>
+</svg>

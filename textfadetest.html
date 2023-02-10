@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+
+
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+  
+  
+
+  
+<style>
+html, body {
+    text-rendering: optimizeLegibility;
+    font-synthesis: none;
+}
+
+body {
+  background: #ffffff00;
+  font-family: BRCobane-Medium;
+ src:url(./BRCobane-Medium.woff);
+  font-size: 10px;
+}
+@font-face {
+    font-family: BRCobane-Medium;
+    src:url(./BRCobane-Medium.woff);
+  }
+.text-fader {
+  margin: 0px 0px 0px 0px;
+}
+.text-fader .text-content {
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000000;
+}
+.text-fader .text-content span.line {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+  animation-duration: 0.8s;
+  display: none;
+}
+.text-fader .text-content span.colour .letter {
+  color: #000000;
+  transition: all 0.2s ease;
+}
+.text-fader .text-content.in span.line {
+  animation-name: textFaderIn;
+  display: block;
+}
+.text-fader .text-content.in span.colour.go .letter {
+  color: #194eff;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(1) {
+  transition-delay: 0.07s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(2) {
+  transition-delay: 0.14s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(3) {
+  transition-delay: 0.21s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(4) {
+  transition-delay: 0.28s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(5) {
+  transition-delay: 0.35s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(6) {
+  transition-delay: 0.42s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(7) {
+  transition-delay: 0.49s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(8) {
+  transition-delay: 0.56s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(9) {
+  transition-delay: 0.63s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(10) {
+  transition-delay: 0.7s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(11) {
+  transition-delay: 0.77s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(12) {
+  transition-delay: 0.84s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(13) {
+  transition-delay: 0.91s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(14) {
+  transition-delay: 0.98s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(15) {
+  transition-delay: 1.05s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(16) {
+  transition-delay: 1.12s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(17) {
+  transition-delay: 1.19s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(18) {
+  transition-delay: 1.26s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(19) {
+  transition-delay: 1.33s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(20) {
+  transition-delay: 1.4s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(21) {
+  transition-delay: 1.47s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(22) {
+  transition-delay: 1.54s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(23) {
+  transition-delay: 1.61s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(24) {
+  transition-delay: 1.68s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(25) {
+  transition-delay: 1.75s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(26) {
+  transition-delay: 1.82s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(27) {
+  transition-delay: 1.89s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(28) {
+  transition-delay: 1.96s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(29) {
+  transition-delay: 2.03s;
+}
+.text-fader .text-content.in span.colour.go .letter:nth-child(30) {
+  transition-delay: 2.1s;
+}
+.text-fader .text-content.out span.line {
+  animation-name: textFaderOut;
+  display: block;
+}
+
+@keyframes textFaderIn {
+  from {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes textFaderOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-25%);
+  }
+}
+</style>
+
+  
+  
+  
+  <script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+
+
+</head>
+
+<body translate="no" >
+  <div class="text-fader">
+  <div class="text-content">
+    <span class="line">It's all about 🧘🏽 <span class="colour">enahncing your workflow. </span></span>
+    </span></span>
+  </div>
+  
+<div class="text-content">
+    <span class="line">Exploring ways to simplify 🏄🏿 <span class="colour">customer onboarding. </span></span>
+    </span></span>
+  </div>
+  <div class="text-content">
+    <span class="line">Looking for 🔎🪲<span class="colour"> Bugs & Vulnerabilities. </span></span>
+    </span></span>
+  </div>
+  <div class="text-content">
+    <span class="line">Generating & creating solutions with 🎢 <span class="colour"> Open Ai. </span></span>
+    </span></span>
+  </div>
+  <div class="text-content">
+    <span class="line">Working for a more sustainble 🌎 <span class="colour"> world for all. </span></span>
+    </span></span>
+  </div>
+
+<div class="text-content">
+    <span class="line">Intergrating Zaps into your workflow <span class="colour"> with Zapier. ⚡</span></span>
+    </span></span>
+  </div>
+  <div class="text-content">
+    <span class="line">Exploring blockchain daps on 🦄 <span class="colour">Ethereum. </span></span>
+    </span></span>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-1b93190375e9ccc259df3a57c1abc0e64599724ae30d7ea4c6877eb615f89387.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+      <script id="rendered-js" >
+//setup colour change
+$('.text-fader .text-content .colour').each(function () {
+  var textSplit = $(this).text().split('');
+  var returnHTML = '';
+  $.each(textSplit, function (intIndex, objValue) {
+    returnHTML += '<span class="letter">' + objValue + '</span>';
+  });
+  $(this).html(returnHTML);
+});
+
+$(".text-fader .text-content:first-child").addClass("in");
+var textFaderDelay = 5000;
+var textFaderAnimationSpeed = 1000;
+var colourChangeDelay = 1300;
+function nextText($current) {
+  if ($current.next(".text-fader .text-content").length > 0) {
+    var hasNext = true;
+  } else {
+    var hasNext = false;
+  }
+
+  setTimeout(function () {
+    $current.find('.colour').addClass('go');
+  }, colourChangeDelay);
+
+  setTimeout(function () {
+    $current.removeClass("in").addClass("out");
+    setTimeout(function () {
+      $current.find('.colour').removeClass('go');
+      $current.removeClass("out");
+      if (hasNext) {
+        $current.next(".text-fader .text-content").addClass("in");
+      } else {
+        $(".text-fader .text-content:first-child").addClass("in");
+      }
+      nextText($(".text-fader .text-content.in"));
+    }, textFaderAnimationSpeed);
+  }, textFaderDelay);
+}
+nextText($(".text-fader .text-content.in"));
+//# sourceURL=pen.js
+    </script>
+
+  
+
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-4793b73c6332f7f14a9b6bba5d5e62748e9d1bd0b5c52d7af6376f3d1c625d7e.js"></script>
+</body>
+
+</html>
+ 
