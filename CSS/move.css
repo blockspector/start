@@ -1,0 +1,153 @@
+.imgMove {
+animation: myAnim 10s ease-in-out 0s infinite normal forwards;
+object-fit: contain;
+
+overflow: hidden;
+}
+
+.imgMove2 {
+    animation: myAnim 11s ease-in-out 0s infinite normal forwards;
+    object-fit: contain;
+
+	overflow: hidden;
+    }
+
+	.imgMove3 {
+		animation: myAnim 12s ease-in-out 0s infinite normal forwards;
+		object-fit: contain;
+	
+		overflow: hidden;
+		}
+		
+
+		.imgMove4 {
+			animation: myAnim 13s ease-in-out 0s infinite normal forwards;
+			object-fit: contain;
+		
+			overflow: hidden;
+			}
+			
+
+			.imgMove5 {
+				animation: myAnim 14s ease-in-out 0s infinite normal forwards;
+				object-fit: contain;
+			
+				overflow: hidden;
+				}
+				
+    
+
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-8px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(8px);
+	}
+
+	80% {
+		transform: translateY(6.4px);
+	}
+
+	90% {
+		transform: translateY(-6.4px);
+	}
+}
+
+
+@keyframes myAnim2 {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+
+	10%,
+	30%,
+	50%,
+	70% {
+		transform: translateY(-9px);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: translateY(7px);
+	}
+
+	80% {
+		transform: translateY(7.4px);
+	}
+
+	90% {
+		transform: translateY(-7.4px);
+	}
+}
+
+
+.Whatdoyouneed:hover {
+
+   border: 2px solid #7d79ff;
+   transition: border 0.2s ease-in-out;
+   margin: 19px;
+    
+}
+
+.Whatdoyouneed {
+    border-radius: 15px;
+    overflow: hidden;
+    perspective: 2px;
+    border: 2px solid #c7c7c7;
+    margin: 19px;
+	transition: border 0.2s ease-in-out;
+}
+
+.Whatdoyouneed:hover {
+	overflow: hidden;
+	border: 2px solid #027cff;
+	transition: border 0.4s ease-in-out;
+	margin: 19px;
+
+	 
+ }
+ 
+ .Whatdoyouneed2 {
+	 border-radius: 15px;
+	 overflow: hidden;
+	 perspective: 2px;
+	 border: 2px solid #c7c7c7;
+	 transition: border 0.4s ease-in-out;
+	 
+ }
+
+ .Whatdoyouneed2:hover {
+	overflow: hidden;
+	border: 2px solid #0235ff;
+	transition: border 0.4s ease-in-out;
+	
+ }
+
+ .WhatdoyouneedIVS {
+	 border-radius: 15px;
+	 overflow: hidden;
+	 perspective: 2px;
+	 border: 2px solid #c7c7c700;
+	 background-color: #ffffff00;
+	 
+ }
+
+
+ .mb-3 {
+    margin-bottom: 1vh!important;
+}

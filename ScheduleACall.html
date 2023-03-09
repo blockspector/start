@@ -1,69 +1,123 @@
-<!doctype html>
-<html> 
+<!DOCTYPE html>
+ <html lang="en" dir="ltr">
   <head>   <!-- Start of HEAD  -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/x-icon" href="./Img/favicon.ico">
-<!-- CSS only  Any change? -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<!-- Dropdown Button From WEB Still editing !-->
-<!-- Bootstrap JS CDN -->
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="./Nav.css">
-<!-- Font CSS  -->
-<link rel="stylesheet" type="text/css" href="./stylesheet.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<title>Blockspector</title>
-<link rel="stylesheet" type="text/css" href="./disappearReappear.css">
+ <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./Img/favicon.ico">
+  <!-- CSS only  Any change? -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+ <!-- Dropdown Button From WEB Still editing !-->
+ <!-- Bootstrap JS CDN -->
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+ integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+ <link rel="stylesheet" type="text/css" href="./CSS/Nav.css">
+ <!-- Font CSS  -->
+ <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+ integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <title>Blockspector</title>
+ <link rel="stylesheet" type="text/css" href="./CSS/disappearReappear.css">
+ <link rel="stylesheet" type="text/css" href="./CSS/move.css">
+ <link rel="stylesheet" href="./CSS/aos-by-red.css">
+ <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+ <link rel="stylesheet" href="./CSS/cookie.css">
+ <style>
+  * {
+      box-sizing: border-box
+  }
 
+  body {
+      height: 100vh;
+      transition: background 2s ease;
+  }
 
-
+  .content {
+      padding: 50px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+  }
+</style>
+</head>
+<!--colour change test -->
+<style>
+    * {
+       box-sizing: border-box
+   }
+ 
+   .content {
+       padding: 50px;
+       color: rgb(0, 0, 0);
+       text-align: center;
+   }
+</style>
+<!--colour change test ABOVE-->
+<body>
 <style>
   .dropdown-toggle::after {
       content: none;
   }
 </style>
-<!-- Main Logo for Mobile    -->
-<a class="hamburger-menu" style=" 
-background-color: white;
-padding-top: 15px;
-background-color: rgba(255,255,255,0.06);
-border: 1px solid rgba(255, 255, 255, 0.541);
-width: 100%;
-backdrop-filter: blur(9px);
--webkit-backdrop-filter: blur(9px);
-position: fixed;
-width: 100%;
-">
-<img src="./SVG/pngtest3.png" alt="" width="46" height="48" style="display: block; margin-left: auto; margin-right: auto">
-</a>
-<!-- Main Logo for Desktop    -->
 
-  <div class="textfadeFull r1"style="
-  align-content: center;
-  justify-content: center;
-  padding-top: 15px;
-  display: flex;>" >
-      <div>   
-          <a href="https://www.blockspector.io/"><img href="" class="textfadeFull" src="./SVG/pngtest3.png" alt="" width="46" height="48"/></a>
-      </div>
-      <div class="textfadeFull">
-        
-      </div>
-    </div>
-</a>
-<!-- Main Logo for Desktop + mobile simple switch    -->
-<title>Blockspector.io</title>
+<body>
+ 
+<!-- Mobile    -->
+<div class="hamburger-menu" style=" 
+ background-color: rgba(255, 255, 255, 0.05);
+ border-bottom: 1px solid rgba(255, 255, 255, 0.108);
+ width: 100%;
+ backdrop-filter: blur(9px);
+ -webkit-backdrop-filter: blur(9px);
+ position: fixed;
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ align-content: center;
+justify-content: center;
+display: flex;
+ z-index: 1;
+ ">
+ <div>
+    <a href="./Index.html"><img href="" class="hamburger-menu" 
+    src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" style="
+      margin-top: 15px;
+  
+  "/></a>
+ </div>
+</div>
+ <!-- Main Logo for Desktop    -->
 
-<div class="mt-0 sticky-top" style="
-  padding-left: 20px;
-">
+    <div class="textfadeFull r1"style="
+    align-content: center;
+    justify-content: center;
+    padding-top: 15px;
+    display: flex;>" >
+        <div>   
+            <a href="./Index.html"><img href="" class="textfadeFull"
+               src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" /></a>
+        </div>
+        <div class="textfadeFull">
+          
+        </div>
+      </div>
+</a>
+ <!-- Main Logo for Desktop + mobile simple switch    -->
+  <title>Blockspector.io</title>
+
+  <div class="mt-0 sticky-top" style="
+    padding-left: 0px;
+"> 
+
 <nav class="navbar navbar-expand-sm navbar-light bg-light" style="
 padding-top: 0px;
 ">
-    <div class="container-fluid nav justify-content-center">
-        <a href="#" class="navbar-brand" style="margin-right: 20px" ;="">
+    <div class="container-fluid nav justify-content-center" style="
+    padding-right: 0px;
+">
+        <a href="#" class="navbar-brand" style="margin-right: 0px" ;="">
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -71,27 +125,32 @@ padding-top: 0px;
         <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
             <div class="navbar-nav justify-content-center">
                 <li class="nav-item dropdown justify-content-center">
-                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" style="padding-right: 36px !important;/* padding-left: 39px !important; */padding-left: 8px !important;">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 60px !important;padding-left: 60px !important;
+                ">
                     About
                   </a>
                   <ul class="dropdown-menu justify-content-center">
-                    <li><a class="dropdown-item" href="./About.html"> 💿 About</a></li>
+                    <li><a class="dropdown-item" href="./About.html">💿 About</a></li>
                   </ul>
                 </li><li class="nav-item dropdown justify-content-center">
-                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" style="padding-right: 52px !important;padding-left: 40px !important;">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 60px!important;padding-left: 60px !important;
+                    transform: translate(7px, 0px);">
                     Explore
                   </a>
                   <ul class="dropdown-menu justify-content-center">
-                    <li><a class="dropdown-item" href="./CurrentProjects.html"> 🪐 Current Projects</a></li>
+                    <li><a class="dropdown-item disabled " href=""> 🪐 Current Projects</a></li>
                   </ul>
                   </li><li class="nav-item dropdown justify-content-center">
-                    <a class="nav-link" href="#" role="button" aria-expanded="false" style="padding-right: 26px !important;/* padding-left: 0px !important; */padding-left: 18px !important;">
+                    <a class="nav-link" href="#" role="button" aria-expanded="false" 
+                    style="padding-right: 60px !important; padding-left: 60px !important;">
                       Contact
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="mailto:hello@Blockspector.io?subject=How%20can%20we%20help%3F%20(YOUR%20REQUEST%20HERE!)&amp;body=Are%20you%20looking%20to%20collaborate%20on%20a%20new%20project%3F%20Y%2FN">✉️ Email</a></li>
+                      <li><a class="dropdown-item" href="mailto:hello@blockspector.io?subject=%F0%9F%AA%90%20Enquiry%20(Summary%20of%20your%20needs)%20&body=Thanks%20for%20checking%20out%20the%20Blockspector%20site.%0D%0ALet's%20discuss%20how%20we%20can%20work%20symbiotically%2C%20to%20create%20something%20great!">✉️ Email</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a Call</a></li>
+                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a call</a></li>
                     </ul>
             </li></div>
         </div>
@@ -100,159 +159,140 @@ padding-top: 0px;
 </div>
 
 
-<!-- End of Navbar  -->
+  <!-- End of Navbar  -->
 
-<title>Blockspector.io</title>
+  <title>Blockspector.io</title>
 
 
 
-<!-- Nav 2 TEST! -->
-<div class="hamburger-menu">
-  <input id="menu__toggle" type="checkbox" />
-  <label class="menu__btn" for="menu__toggle">
-    <span></span>
-  </label>
 
-  <ul class="menu__box">
-    <li><a class="menu__item" href="mailto:hello@Blockspector.io?subject=How%20can%20we%20help%3F%20(YOUR%20REQUEST%20HERE!)&body=Are%20you%20looking%20to%20collaborate%20on%20a%20new%20project%3F%20Y%2FN">✉️ Email</a></li>
-    <li><a class="menu__item" href="./CurrentProjects.html">🪐 Current Projects</a></li>
-    <li><a class="menu__item" href="./ScheduleACall.html">🏄‍♂️ Schedule a Call</a></li>
-    <li><a class="menu__item" href="./About.html">💿 About</a></li>
-    <li><a class="menu__item" href="./Index.html">🌍 Home</a></li>
-  </ul>
-</div>
+  <div class="hamburger-menu" style="z-index: index 1";>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
 
-<!-- Nav 2 TEST! -->
+    <ul class="menu__box">
+      <li><a class="menu__item" href="./About.html">💿 About</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <!-- <li><a class="menu__item disabled" href="">🪐 Current Projects</a></li> -->
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="menu__item" href="./ScheduleACall.html">🏄‍♂️ Schedule a Call</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="menu__item" href="mailto:hello@blockspector.io?subject=%F0%9F%AA%90%20Enquiry%20(Summary%20of%20your%20needs)%20&body=Thanks%20for%20checking%20out%20the%20Blockspector%20site.%0D%0ALet's%20discuss%20how%20we%20can%20work%20symbiotically%2C%20to%20create%20something%20great!">✉️ Email</a></li>
+      <li><hr class="dropdown-divider"></li>
+      <li><a class="menu__item" href="./Index.html">🌍 Home</a></li>
+    </ul>
+  </div>
+
+  <!-- Nav 2 TEST! -->
 </head>
 <body>  <!--BODY START  -->
-  <div class="hamburger-menu">
-    <pre>  
-    </pre>
-  </div>
-  <div class="display-1 container-fluid d-flex justify-content-center">
-    <display-1> <style> 
-      @font-face {
-  font-family: BRCobane-Medium;
-  src:url(./BRCobane-Medium.woff)}
-      .display-1 {
-        font-size: 2.6rem;
-        font-weight: medium;
-        font-family: BRCobane-Medium;
-       src:url(./BRCobane-Medium.woff);
-        color: #000000;
-        text-align: center;
-        padding-left: 20.5px;
-        margin-top: 0px;
-      }
-    </style> Let's talk about you and your organisation.</display-1> 
+
+<pre>
 
 
-     
-     
-   </div>
+</pre>
+<div class="display-1 container-fluid d-flex justify-content-center">
+  <display-1> <style> 
+    @font-face {
+font-family: BRCobane-Medium;
+src:url(./BRCobane-Medium.woff)}
+    .display-1 {
+      font-size: 1.6rem;
+      font-weight: medium;
+      font-family: BRCobane-Medium;
+     src:url(./BRCobane-Medium.woff);
+      color: #000000;
+      text-align: center;
+      padding-left: 20.5px;
+      margin-top: 0px;
+    }
+  </style>Let's talk about your business tech needs! </display-1> 
+</div>
+<pre class="list-group-horizontal"></pre>
+<div class="container-fluid d-flex justify-content-center">
+<ul style="margin: 0.2;" class="list-group list-group-horizontal">
+<li class="text-sm mr-2 px-2 border300 rounded-full list-unstyled d-flex flex-wrap  list-group-horizontal">Automation</li>
+<li class="text-sm mr-2 px-2 border300 rounded-full list-unstyled d-flex flex-wrap  list-group-horizontal">Smart-Contracts</li>
+<li class="text-sm mr-2 px-2 border300 rounded-full list-unstyled d-flex flex-wrap  list-group-horizontal">Web-Dev</li>
 
+</ul>
+</div>
 
-
-
-   <pre>
-  </pre>
-  <div class="container justify-content-center"  style="font-size: 1rem;font-weight: regular; padding-left: 19px; text-align: center;">
-   <display-1 style="font-size: 1.2rem;
-   line-height: 2rem;
-   display: inline-block; text-align: left;
-   font-weight: medium;
-  color: #ababab;
-   text-align: left;
-   padding-left: 0px;
-   margin-top: 0px;">Developing unique solutions  to create value for you and your organisation. 
-   The mission is to help organisations become more efficient with technology as well as streamline tasks, making life easier for you and your team! 
-  
-  </display-1><pre></pre>
-     
-     
-   </div>
-
-
-
-
-
-
- 
   <pre></pre>
- 
-</div>
 
-  
+  <div class="d-flex align-items-center justify-content-center">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <a style="--bs-btn-border-radius: 2rem;" class="btn btn-primary align-items-center justify-content-center" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/blockspector'});return false;">Let&#39;s arrange a time.</a>
+    </div>
+    <pre></pre>
+  <div class="d-flex justify-content-center bd-highlight">
+    <div><img class="imgMove3 navbarDontShowWhenHam" src="./DevCardMobile.png" style="filter: drop-shadow(0 0.1rem #929292);" width="230" height="345"></div>
+    <div><img class="imgMove3 hamburger-menu" src="./DevCardMobile.png" style="filter: drop-shadow(0 0.1rem #929292);" width="230" height="345"></div>
+  </div>
+  <pre>
 
-  
-</div>
-
-
-
-<!-- Calendly link widget begin -->
-<div class="display-1 d-flex align-items-center justify-content-center">
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<a style="--bs-btn-border-radius: 2rem;" class="btn btn-primary align-items-center justify-content-center" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/blockspector'});return false;">Let&#39;s arrange a time.</a>
-</div>
-
-<!-- Calendly link widget end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </pre>
+   
+      
+      <!-- a Mobile card Invisible card  -->
+  <div class="d-flex justify-content-center bd-highlight mb-3 ">
+    <a class="hamburger-menu" href="http://example.com">
+      <div class="WhatdoyouneedIVS " style="
+      background-size: cover;
+      width: 300px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    ">
+      <h2 style="margin: 1; font-family: BRCobane-Medium "></h2>
+      <p style="margin: 0; font-family: BRCobane-Medium "></p>
+    </div>
+    </a>
+  </div>
 
 
 
 
+ <!--🔴 🛑 Script for AOS Do not move! 🛑 🔴 -->
 
+       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+         <script>
+          AOS.init({
+           duration: 3000,
+           once: true,
+         });
+         </script>
+ <!--Script for AOS -->
 
-
-
-
-
-
-
-
-
-
+<pre></pre>
 
     </body>   <!--BODY END  --> 
-    <!--FOOTER START  --> 
+    <!-- ⚠️🦶 FOOTER START  --> <!--BODY END  -->  <!--FOOTER START ⚠️🦶  -->   <!--FOOTER START  ⚠️ 🦶--> <!--BODY END ⚠️🦶  -->  <!--FOOTER START ⚠️ 🦶 --> 
+ 
+      <div>
+	<footer class="d-flex justify-content-between align-items-center py-x border-top flex-wrap" data-aos="fade-up" data-aos-duration="500" data-aos-once="false" data-aos-offset="0" style="padding-left: 20px;padding-right: 20px; font-family: BRCobane-Medium !important;">
     
-      <div class="container">
-	<footer class="d-flex justify-content-between align-items-center py-3 my-3 border-top flex-wrap" style="padding-left: 8px;">
-   
-    <p class="col-md-4 mb-0 text-muted justify-content-start" style="font-size :11px;">© 2022 Blockspector Limited <br>
-      Blockspector Limited is a company registered in England and Wales (No. 14204416). </p>
-      <style>
+       <p class="col-md-4 mb-0 text-muted justify-content-start" style="font-size :11px; color: #000000;">© 2023 Blockspector Limited <br>
+       Blockspector Limited is a company registered in England and Wales (No. 14204416). </p>
+        <style>
 @font-face {
   font-family: BRCobane-Medium;
   src:url(./BRCobane-Medium.woff)}
 
 
 
-        .h5{
+         .h5{
           
         
   
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 0;
-  color:#000 !important;
   text-decoration: none !important;
   font-family: BRCobane-Medium !important;
 
@@ -260,31 +300,16 @@ padding-top: 0px;
 };
 </style>
   <a href="./Index.html">
-  <h5 class="justify-content-center h5 flex-wrap" style="padding-top: 20px!important; font-family: BRCobane-Medium !important;">
-    Blockspector.
+  <h5 class="justify-content-center h5 flex-wrap" style="padding-top: 13px!important; font-family: BRCobane-Medium !important;">
+    Blockspector
   </h5> 
 </a>
      
    
-    <ul class="nav col-md-4 justify-content-end flex-wrap" style="padding-top: 10px !important; margin-left: -10px !important;">
+    <ul class="nav col-md-4 justify-content-end flex-wrap" style="padding-top: 10px !important; margin-left: -10px !important; color: #000000; font-family: BRCobane-Medium !important;">
       <li class="nav-item"><a href="./About.html" class="nav-link px-2 text-muted">About</a></li>
-      <li class="nav-item"><a href="./CurrentProjects.html" class="nav-link px-2 text-muted">Explore</a></li>
-      <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-muted">FAQs</a></li>
+      <!-- <li class="nav-item"><a href="./CurrentProjects.html" class="nav-link px-2 text-muted">Explore</a></li> -->
+      <!-- <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-muted">FAQs</a></li> -->
     </ul>
   </footer>
 </div>
-
-  <!--FOOTER END  
-  <phone
-    class="phone" style="padding-top: 20px !important;" >
-      TEST TEST TEST .
-   
-  </phone>  --> 
-
-
-  <!--FOOTER END  --> 
-
-	
-	
-	
-</html>
