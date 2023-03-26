@@ -1,4 +1,4 @@
-.imgMove {
+/* .imgMove {
 animation: myAnim 10s ease-in-out 0s infinite normal forwards;
 object-fit: contain;
 
@@ -34,7 +34,7 @@ overflow: hidden;
 			
 				overflow: hidden;
 				}
-				
+				 */
     
 
 
@@ -111,6 +111,10 @@ overflow: hidden;
     border: 2px solid #c7c7c7;
     margin: 19px;
 	transition: border 0.2s ease-in-out;
+	background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 3px 32px 0 rgba(182, 182, 182, 0.37);
+backdrop-filter: blur( 1.5px );
+-webkit-backdrop-filter: blur( 2.5px );
 }
 
 .Whatdoyouneed:hover {
@@ -128,6 +132,13 @@ overflow: hidden;
 	 perspective: 2px;
 	 border: 2px solid #c7c7c7;
 	 transition: border 0.4s ease-in-out;
+	 background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 	 
  }
 
