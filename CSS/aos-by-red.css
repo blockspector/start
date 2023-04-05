@@ -65,6 +65,22 @@
     z-index: index 2;
   }
 
+  .containerp {
+    background-image: url(../blueMedium.png);
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    position:relative;
+    height:700px;
+    width:100%;
+    margin: auto;
+    z-index: index 2;
+  }
+
+
+
+
+
   .container6{
     text-align: left;
     width: 100%;
