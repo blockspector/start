@@ -22,7 +22,8 @@
  <link rel="stylesheet" type="text/css" href="./CSS/disappearReappear.css">
  <link rel="stylesheet" type="text/css" href="./CSS/move.css">
  <link rel="stylesheet" href="./CSS/aos-by-red.css">
- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+ <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+ <link rel="stylesheet" href="./CSS/aos.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
  <link rel="stylesheet" href="./CSS/cookie.css">
  <style>
@@ -31,8 +32,8 @@
   }
 
   body {
-      height: 100vh;
-      transition: background 2s ease;
+  
+      transition: background 2s ease; 
   }
 
   .content {
@@ -44,26 +45,23 @@
 </head>
 <!--colour change test -->
 <style>
-    * {
-       box-sizing: border-box
-   }
- 
-   .content {
-       padding: 50px;
-       color: rgb(0, 0, 0);
-       text-align: center;
-   }
+  * {
+      box-sizing: border-box
+  }
+
+  .content {
+      padding: 50px;
+      color: rgb(0, 0, 0);
+      text-align: center;
+  }
 </style>
 <!--colour change test ABOVE-->
 <body>
-<style>
-  .dropdown-toggle::after {
-      content: none;
-  }
+  <style>
+    .dropdown-toggle::after {
+        content: none;
+    }
 </style>
-
-<body>
- 
 <!-- Mobile    -->
 <div class="hamburger-menu" style=" 
  background-color: rgba(255, 255, 255, 0.05);
@@ -81,7 +79,7 @@ display: flex;
  z-index: 1;
  ">
  <div>
-    <a href="./Index.html"><img href="" class="hamburger-menu" 
+    <a href="https://www.blockspector.io/"><img href="" class="hamburger-menu" 
     src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" style="
       margin-top: 15px;
   
@@ -93,12 +91,11 @@ display: flex;
     <div class="textfadeFull r1"style="
     align-content: center;
     justify-content: center;
-    padding-top: 15px;
     display: flex;>" >
-        <div>   
-            <a href="./Index.html"><img href="" class="textfadeFull"
+        <!-- <div>   
+            <a href="https://www.blockspector.io/"><img href="" class="textfadeFull"
                src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" /></a>
-        </div>
+        </div> -->
         <div class="textfadeFull">
           
         </div>
@@ -123,34 +120,53 @@ padding-top: 0px;
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
-            <div class="navbar-nav justify-content-center">
+          <div class="navbar-nav justify-content-center" style="
+          padding-top: 7px;
+      ">
+       <li class="nav-item dropdown justify-content-center">
+        <a href="https://www.blockspector.io/">
+          <img href="" class="textfadeFull"
+          src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="23" height="24" style="transform: translate(-33px,3px);" /></a>
+      </li>
+              <li class="nav-item dropdown justify-content-center">
+                <a class="nav-link justify-content-center" href="./Index.html" role="button" aria-expanded="false" 
+                style="padding-right: 21px !important;
+                padding-left: 0px !important;
+                 color: #000000cb;
+                  font-family: BRCobane-Medium !important;
+              
+              ">
+                  Blockspector
+                </a>
+              </li>
                 <li class="nav-item dropdown justify-content-center">
                   <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
-                  style="padding-right: 60px !important;padding-left: 60px !important;
+                  style="padding-right: 40px !important;padding-left: 40px !important;
                 ">
                     About
                   </a>
                   <ul class="dropdown-menu justify-content-center">
                     <li><a class="dropdown-item" href="./About.html">💿 About</a></li>
                   </ul>
-                </li><li class="nav-item dropdown justify-content-center">
+                </li>
+                <li class="nav-item dropdown justify-content-center">
                   <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
-                  style="padding-right: 60px!important;padding-left: 60px !important;
-                    transform: translate(7px, 0px);">
+                  style="padding-right: 40px!important;padding-left: 40px !important;
+                ">
                     Explore
                   </a>
                   <ul class="dropdown-menu justify-content-center">
-                    <li><a class="dropdown-item disabled " href=""> 🪐 Current Projects</a></li>
+                    <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
                   </ul>
                   </li><li class="nav-item dropdown justify-content-center">
                     <a class="nav-link" href="#" role="button" aria-expanded="false" 
-                    style="padding-right: 60px !important; padding-left: 60px !important;">
+                    style="padding-right: 40px !important; padding-left: 40px !important;">
                       Contact
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="mailto:hello@blockspector.io?subject=%F0%9F%AA%90%20Enquiry%20(Summary%20of%20your%20needs)%20&body=Thanks%20for%20checking%20out%20the%20Blockspector%20site.%0D%0ALet's%20discuss%20how%20we%20can%20work%20symbiotically%2C%20to%20create%20something%20great!">✉️ Email</a></li>
+                      <li><a class="dropdown-item" href="">✉️ Email</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a call</a></li>
+                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a Demo</a></li>
                     </ul>
             </li></div>
         </div>

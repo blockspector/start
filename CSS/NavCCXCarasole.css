@@ -1,0 +1,11 @@
+.item row{
+    display:table;
+  }
+  
+  .img-center-vertical{
+    display:table-cell;
+    vertical-align:middle;
+    height:300px;
+    float: inherit;
+    border-radius: 16px;
+  }

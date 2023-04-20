@@ -59,7 +59,6 @@
     background: #1E4CF1;
     color: #ffffff;
     position:relative;
-    height:700px;
     width:100%;
     margin: auto;
     z-index: index 2;
@@ -77,20 +76,47 @@
     z-index: index 2;
   }
 
+  .containerPreEnd{
+    background: #5561e1;
+    color: #ffffff;
+    position:relative;
+    width:100%;
+    margin: auto;
+    z-index: index 2;
+  }
 
-
+  .containerEnd{
+    background: #ffffff;
+    color: #000000;
+    position:relative;
+    width:100%;
+    margin: auto;
+    z-index: index 2;
+  }
 
 
   .container6{
     text-align: left;
     width: 100%;
     flex-direction: column;
-    font-family: BRcobane-Medium;
+    /* font-family: BRcobane-Medium; */
     font-weight: 400;
     line-height: 1.2;
     border-radius: 15px 50px 30px;
 
   }
+
+  .container7Header{
+    text-align: left;
+    width: 100%;
+    flex-direction: column;
+     font-family: BRcobane-Medium; 
+    font-weight: 400;
+    line-height: 1.2;
+    border-radius: 15px 50px 30px;
+
+  }
+
 
   svg path {
     stroke-width: 0.4px;

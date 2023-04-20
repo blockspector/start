@@ -1,0 +1,106 @@
+<!-- ⚠️ START Transfer Arrows DESKTOP DESKTOP    ⚠️  
+    <div class="display-4 container-fluid d-flex justify-content-center">
+      <display-1 class="bigText" data-aos="fade-right" data-aos-duration="600" data-aos-once="true" data-aos-offset="330" class="p-2 bd-highlight"> <pre> </pre> <style> 
+        .display-4 {
+          font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          color: #000000;
+          text-align: center;
+          padding-left: 20.5px;
+          margin-top: 0px;
+          font-weight: 500;
+        }
+      </style>Easy on/off ramp <svg xmlns="http://www.w3.org/2000/svg" style="color: #0926ff;" width="32" height="32" path="0.5px"  stroke-width="0.5px" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+      <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+    </svg> </display-1> 
+    </div>
+          <pre></pre>
+            <div class="d-flex justify-content-center bd-highlight mb-3 bigText ">
+        <div class="bigText" data-aos="fade-right" data-aos-duration="400" data-aos-once="false" data-aos-offset="200" class="p-2 bd-highlight"><img class="" src="./Arrow1.png" 
+          width="520" height="190" style="overflow: hidden;"></div>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3 bigText ">
+      <div class="bigText" style="top: -15px;" data-aos="fade-left" data-aos-duration="400" data-aos-once="false" data-aos-offset="150 " class="p-2 bd-highlight"><img class="" src="./Arrow2.png" 
+        style="transform: translateY(-45px); overflow: hidden;"
+         width="520" height="190"></div>
+    </div> -->
+    
+    
+    
+    
+    
+    
+    
+          
+    <!--⚠️ END Transfer Arrows   ⚠️  --> 
+    
+    <!-- ⚠️ ☎️ START Transfer Arrows FOR MOBILE ☎️  ⚠️  
+    <div class="container5 hamburger-menu " style="margin-left: auto; margin-right: auto;">
+      <div class="hamburger-menu" data-aos="fade-right" data-aos-duration="600" data-aos-once="true" data-aos-offset="130" class="p-2 bd-highlight"><h1 style="
+        text-align: center;
+        margin: auto;
+        width: 70%;
+          font-size: 2.5rem !important; ">Transfer equity<br> with ease <svg xmlns="http://www.w3.org/2000/svg" style="color: #004EFC;" width="20" height="20" path="0.5px"  stroke-width="0.5px" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+      <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+    </svg> </h1></div>
+          <pre></pre>
+          <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
+            <div class="hamburger-menu" data-aos="fade-right" data-aos-duration="400" data-aos-once="true" data-aos-offset="100" class="p-2 bd-highlight"><img class="" src="./Arrow1.png" width="174" height="64"></div>
+        </div>
+        <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
+          <div class="hamburger-menu" style="top: -15px;" data-aos="fade-left" data-aos-duration="400" data-aos-once="true" data-aos-offset="50 " class="p-2 bd-highlight"><img class="" src="./Arrow2.png" style="transform: translateY(-18px);" width="174" height="64"></div>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div> -->
+    
+    <!-- <div class="hamburger-menu" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="240" class="p-2 bd-highlight"><h3 style="
+      text-align: left;
+      margin: auto;
+      width: 64%;
+      line-height: 150%;
+      font-size: 1.3rem !important;
+      font-family: BRcobane-Medium;
+      ">   With a finger press or click, you can<span style="color: #004EFC;"> easily transfer equity via the blockchain,</span> 
+    making transferring value a seamless cost effective solution for any organisation. <br>  
+      </h3>
+    <pre></pre>
+      </div>
+    </div>
+        ⚠️ ☎️ END  Transfer Arrows FOR MOBILE ☎️  ⚠️  --> 
+        <!--⚠️ Start of Transfer Arrows  TEXT Explenation  ⚠️  --> 
+    <!-- <div class="container5" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="150" class="p-2 bd-highlight">
+      <div class="d-flex justify-content-center">
+        <div class="p-2 bd-highlight">
+      <p class="justify-content-center" style="
+    color: #8b8b8b;margin: 0px;
+    text-align:left;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 0px;
+    line-height: 170%;
+    width: 65%;
+    font-size: 1rem;
+    column-span: all;
+    ">
+     
+     Transfer Arrows FOR MOBILE & Desktop is a secure and transparent way to store and track information. 
+     It is like a shared public notice board that multiple people can use at the same time. 
+     When someone wants to add new information to the notice board, they must get the approval of others. 
+     If everyone agrees, the new information is added to the notice board, 
+     along with a special code called a "hash" that helps prevent any changes to the information. 
+     When a new transfer of equity is made, 
+     it is checked by the network and added to a chain of previous transfers, creating a permanent record of ownership. 
+    
+    
+       </p>
+                              
+                          
+                                     
+                                  </div>
+                              </div>
+    </div>
+    </div> -->
+    
