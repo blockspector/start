@@ -94,6 +94,13 @@
   background-color: #0055ffed;
 }
 
+.BRCobane-Medium {
+  font-family: BRCobane-Medium;
+  src:url(./BRCobane-Medium.woff);
+  
+}
+
+
 @font-face {
   font-family: BRCobane-Medium;
   src:url(./BRCobane-Medium.woff);
