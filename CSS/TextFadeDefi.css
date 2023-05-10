@@ -10,9 +10,9 @@
     margin: 0px 0px 0px 0px;
   }
   .text-fader .text-content {
-    font-size: calc(1vw + 1vh + 0.5vmin);
+    font-size: calc(2vw + 1vh + 0.5vmin);
     text-align: center;
-    font-weight: bold;
+    font-weight: regular;
     color: #000000;
     font-family: 'BRCobane-Medium';
   }
@@ -34,8 +34,9 @@
   .text-fader .text-content.in span.colour.go .letter {
 
     color: rgb(0, 81, 255);
-    font-size: calc(1vw + 1vh + 0.5vmin);
+    font-size: calc(2vw + 1vh + 0.5vmin);
     font-family: 'BRCobane-Medium';
+    font-weight: regular;
   }
   .text-fader .text-content.in span.colour.go .letter:nth-child(1) {
     transition-delay: 0.07s;

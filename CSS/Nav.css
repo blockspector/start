@@ -1,7 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-
+ 
+/* *{
+  border: 1px solid red;
+} */
 
 
 /* Dropdown Button From WEB Still editing */ 
@@ -61,7 +64,7 @@
   width: 100%;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
-
+  font-weight: 500;
   position: sticky; top: 0;
 
   

@@ -72,8 +72,12 @@
  
     }
     }
-  
-  @media screen and (max-width:1230px) {
+    @media screen and (max-width:1230px) {
+      .cardfullPhone {
+        display: none;
+      }
+    }
+  @media screen and (max-width:1310px) {
     .cardfull {
       display: none;
     }
@@ -94,4 +98,3 @@
         display: none;
       }
     }
-
