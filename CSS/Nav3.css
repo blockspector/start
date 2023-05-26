@@ -161,17 +161,17 @@ footer {
 
 html {
   height: 100%;
-  overflow-x: hidden;
+
 }
 body {
   position: relative;
   min-height: 100%;
-  overflow-x: hidden;
+
 }
 .wrapper
 {
   position: relative;
-  overflow: auto;
+  : auto;
 }
 
 

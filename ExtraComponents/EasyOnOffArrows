@@ -17,11 +17,11 @@
           <pre></pre>
             <div class="d-flex justify-content-center bd-highlight mb-3 bigText ">
         <div class="bigText" data-aos="fade-right" data-aos-duration="400" data-aos-once="false" data-aos-offset="200" class="p-2 bd-highlight"><img class="" src="./Arrow1.png" 
-          width="520" height="190" style="overflow: hidden;"></div>
+          width="520" height="190" style=": hidden;"></div>
     </div>
     <div class="d-flex justify-content-center bd-highlight mb-3 bigText ">
       <div class="bigText" style="top: -15px;" data-aos="fade-left" data-aos-duration="400" data-aos-once="false" data-aos-offset="150 " class="p-2 bd-highlight"><img class="" src="./Arrow2.png" 
-        style="transform: translateY(-45px); overflow: hidden;"
+        style="transform: translateY(-45px); : hidden;"
          width="520" height="190"></div>
     </div> -->
     

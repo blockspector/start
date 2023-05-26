@@ -1,7 +1,6 @@
 .containerFlex {
     position: relative;
     width: 100%;
-    overflow: hidden;
     padding-top: 340px;
   }
   
@@ -26,6 +25,6 @@ sup1{
   margin-bottom: 1rem;
   font-size: 12px;
   font-family: system-ui;
-  width: 72%;
+  width: 79%;
     color: #cbcbcb;
 }; 

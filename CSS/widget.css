@@ -27,8 +27,8 @@
   position: relative;
 }
 .calendly-popup-content.calendly-mobile {
-    -webkit-overflow-scrolling: touch;
-    overflow-y: auto;
+    /* -webkit--scrolling: touch; */
+    /* -y: auto; */
   }
 .calendly-overlay {
   position: fixed;
@@ -36,7 +36,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
+  /* : hidden; */
   z-index: 9999;
   background-color: #a5a5a5;
   background-color: rgba(31, 31, 31, .4);

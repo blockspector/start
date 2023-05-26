@@ -2,14 +2,14 @@
   
 
 
-@media all and (max-width:576px) {
+@media all and (max-width:768px) {
     .phone {
       display: none;
 
     }
   }
  
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
     .navbar {
       display: none;
     }
@@ -20,7 +20,7 @@
     display: none;
   }
 }
-  @media all and (min-width:577px) {
+  @media all and (min-width:769px) {
     .hamburger-menu {
       display: none;
 
@@ -35,14 +35,14 @@
 }
 
 
-@media screen and (max-width:576px) {
+@media screen and (max-width:768px) {
   .hideWhenLessthen1231show575 {
     display: none;
   }
 }
 
 
-  @media screen and (max-width:576px) {
+  @media screen and (max-width:768px) {
     .textfadeFull {
       display: none;
     }
@@ -59,13 +59,13 @@
     }
   }
  
-  @media screen and (max-width:576px) {
+  @media screen and (max-width:768px) {
     .logoBig {
       display: none;}
     
     }
   
-  @media all and (min-width:576px) {
+  @media all and (min-width:768px) {
     .logoSmall {
       display: none;
 
@@ -84,8 +84,10 @@
     .container4 {
       width: 40em;
   }
-
-
+  @media screen and (max-width:1350px) {
+    .cardfullPlus {
+      display: none;
+    }
   }
   @media screen and (max-width:770px) {
     .cardmed {
@@ -95,6 +97,6 @@
     }
     @media screen and (max-width:374px) {
       .list-group-horizontal {
-        display: none;
-      }
+        display: none; }
     }
+  } 

@@ -1,41 +1,4 @@
-/* .imgMove {
-animation: myAnim 10s ease-in-out 0s infinite normal forwards;
-object-fit: contain;
 
-overflow: hidden;
-}
-
-.imgMove2 {
-    animation: myAnim 11s ease-in-out 0s infinite normal forwards;
-    object-fit: contain;
-
-	overflow: hidden;
-    }
-
-	.imgMove3 {
-		animation: myAnim 12s ease-in-out 0s infinite normal forwards;
-		object-fit: contain;
-	
-		overflow: hidden;
-		}
-		
-
-		.imgMove4 {
-			animation: myAnim 13s ease-in-out 0s infinite normal forwards;
-			object-fit: contain;
-		
-			overflow: hidden;
-			}
-			
-
-			.imgMove5 {
-				animation: myAnim 14s ease-in-out 0s infinite normal forwards;
-				object-fit: contain;
-			
-				overflow: hidden;
-				}
-				 */
-    
 
 
 @keyframes myAnim {
@@ -100,7 +63,6 @@ overflow: hidden;
 
 .Whatdoyouneed {
     border-radius: 15px;
-    overflow: hidden;
     perspective: 2px;
     border: 2px solid #c7c7c7;
     margin: 19px;
@@ -112,7 +74,6 @@ backdrop-filter: blur( 1.5px );
 }
 
 .Whatdoyouneed:hover {
-	overflow: hidden;
 	border: 2px solid #027cff;
 	transition: border 0.2s ease-in-out;
 	margin: 19px;
@@ -122,7 +83,6 @@ backdrop-filter: blur( 1.5px );
  
  .Whatdoyouneed2 {
 	 border-radius: 15px;
-	 overflow: hidden;
 	 perspective: 2px;
 	 border: 2px solid #c7c7c7;
 	 transition: border 0.2s ease-in-out;
@@ -136,7 +96,7 @@ backdrop-filter: blur( 1.5px );
  }
 
  .Whatdoyouneed2:hover {
-	overflow: hidden;
+
 	border: 2px solid #0235ff;
 	transition: border 0.2s ease-in-out;
 	
@@ -144,7 +104,6 @@ backdrop-filter: blur( 1.5px );
 
  .WhatdoyouneedIVS {
 	 border-radius: 15px;
-	 overflow: hidden;
 	 perspective: 2px;
 	 border: 2px solid #c7c7c700;
 	 background-color: #ffffff00;

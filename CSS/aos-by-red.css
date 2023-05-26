@@ -66,13 +66,78 @@ font-family: BRCobane-Medium;
   }
 
   .containerx {
-    background: radial-gradient(circle, rgb(0, 0, 0) 0%, rgb(6 6 6 / 84%) 100%);
-    color: #ffffff;
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color: #e0e7ff;
+    color: #000000;
     position:relative;
-    width:100%;
+    width:95%;
+    border-radius: 31px;
     margin: auto;
     z-index: index 2;
   }
+
+  .containerA {
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color: #e0e7ff;
+    color: #000000;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    margin: auto;
+    z-index: index 2;
+  }
+  .containerB {
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color: #1971ff;
+    color: #000000;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    /* margin-bottom: 35px;
+    margin-top: 35px; */
+    margin: auto;
+    z-index: index 2;
+  }
+  .containerC {
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color: #0b0b0b;
+    color: #ffffff;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    margin: auto;
+    z-index: index 2;
+  }
+  .containerD {
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color:#c9cce8ab;
+    color: #000000;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    margin: auto;
+    z-index: index 2;
+  }
+  .containerE {
+    /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
+    /* background-color: #ffd500;  */
+    background-color: #3377ff;
+    color: #000000;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    margin: auto;
+    z-index: index 2;
+  }
+
+
+
+
 
   .containerp {
     background-image: url(../blueMedium.png);
@@ -87,16 +152,16 @@ font-family: BRCobane-Medium;
   }
 
   .containerPreEnd{
-    background-color: #4874f1;
+    background-color: #3caf91;
     color: #ffffff;
     position:relative;
-    width:100%;
+    width:95%;
+    border-radius: 31px;
     margin: auto;
     z-index: index 2;
   }
 
   .containerEnd{
-    background: #ffffff;
     color: #000000;
     position:relative;
     width:100%;

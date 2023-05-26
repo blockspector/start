@@ -1,10 +1,14 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
  
-/* *{
-  border: 1px solid red;
-} */
+/* 
+.slide-content .scroller {
+  width: 1024px;
+}
+
+
+ *{
+  border: 1px solid rgba(240, 0, 0, 0.398);
+}    */
 
 
 /* Dropdown Button From WEB Still editing */ 
@@ -148,15 +152,19 @@
   background-color: rgb(255, 255, 255,);
 }
 body{
-  background-image: url(../blueMedium.png);
-  background-size:100% auto;
+  /* background-image: url(../blueMedium.png); */
+  /* background-image: url(../bueg2.jpg); */
+  /* Below is 41KB version of the same image */
+   background-image: url(../bueg2Large.jpeg); 
+
+  background-size:100% auto; 
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   margin: 0;
   display: table;
   max-width: 100%;
-  overflow-x: hidden;
+
   
 }
 
@@ -170,7 +178,7 @@ footer {
 
 html {
   height: 100%;
-  /* overflow-x: hidden; */
+  /* -x: hidden; */
 
 }
 body {
@@ -181,7 +189,7 @@ body {
 .wrapper
 {
   position: relative;
-  overflow: auto;
+
 }
 
 
@@ -367,18 +375,32 @@ src:url(./BRCobane-Medium.woff);
   }
 
 .border200{
-  border: 2.8px solid #002fff;
+  border: 2.9px solid #002fff;
   margin: 2px;
+  font-weight: 500;
 }
 
 .border400{
-  border: 2.8px solid #ffffff;
+  border: 2.9px solid #000000;
   margin: 2px;
+  font-weight: 500;
+}
+.border4002{
+  border: 2.9px solid #ffffff;
+  margin: 2px;
+  font-weight: 500;
+}
+
+.border4001{
+  border: 2.9px solid #065a55;
+  margin: 2px;
+  font-weight: 500;
 }
 
 .border300{
-  border: 2.8px solid #000000;
+  border: 2.9px solid #000000;
   margin: 2px;
+  font-weight: 500;
 }
 
   .rounded-full {
@@ -392,6 +414,24 @@ a {
 a:hover {
   color: #1e69ff;
   
+}
+
+
+/* pre{
+  margin-bottom: 35px !important;
+} */
+
+.pextra{
+  color: #8b8b8b;margin: 0px;
+text-align:left;
+margin-left: auto !important;
+margin-right: auto !important;
+margin-bottom: 0px;
+line-height: 170%;
+width: 74%;
+font-weight: 400;
+font-size: 1rem;
+column-span: all;
 }
 
 

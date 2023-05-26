@@ -182,11 +182,11 @@
   }
   
   /**
-   * Correct overflow displayed oddly in IE 9.
+   * Correct  displayed oddly in IE 9.
    */
   
   svg:not(:root) {
-    overflow: hidden;
+    /* : hidden; */
   }
   
   /* Grouping content
@@ -211,11 +211,11 @@
   }
   
   /**
-   * Contain overflow in all browsers.
+   * Contain  in all browsers.
    */
   
   pre {
-    overflow: auto;
+    : auto;
   }
   
   /**
@@ -256,11 +256,11 @@
   }
   
   /**
-   * Address `overflow` set to `hidden` in IE 8/9/10.
+   * Address `` set to `hidden` in IE 8/9/10.
    */
   
   button {
-    overflow: visible;
+    : visible;
   }
   
   /**
@@ -393,7 +393,7 @@
    */
   
   textarea {
-    overflow: auto;
+    : auto;
   }
   
   /**

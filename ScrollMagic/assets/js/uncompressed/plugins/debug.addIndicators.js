@@ -602,7 +602,7 @@
 			inner.textContent = "start";
 			_util.css(inner, {
 				position: "absolute",
-				overflow: "visible",
+				: "visible",
 				"border-width": 0,
 				"border-style": "solid",
 				color: color,
@@ -612,7 +612,7 @@
 			// wrapper
 			_util.css(e, {
 				position: "absolute",
-				overflow: "visible",
+				: "visible",
 				width: 0,
 				height: 0
 			});
@@ -624,7 +624,7 @@
 			e.textContent = "end";
 			_util.css(e, {
 				position: "absolute",
-				overflow: "visible",
+				: "visible",
 				"border-width": 0,
 				"border-style": "solid",
 				color: color,
@@ -636,7 +636,7 @@
 			var e = document.createElement('div');
 			_util.css(e, {
 				position: "absolute",
-				overflow: "visible",
+				: "visible",
 				"white-space": "nowrap",
 				"pointer-events": "none",
 				"font-size": FONT_SIZE
@@ -655,7 +655,7 @@
 			var w = document.createElement('div');
 			_util.css(w, {
 				position: "absolute",
-				overflow: "visible",
+				: "visible",
 				"border-width": 0,
 				"border-style": "solid",
 				color: color,
@@ -666,7 +666,7 @@
 			var e = document.createElement('div');
 			_util.css(e, {
 				position: "fixed",
-				overflow: "visible",
+				: "visible",
 				"white-space": "nowrap",
 				"pointer-events": "none",
 				"font-size": FONT_SIZE

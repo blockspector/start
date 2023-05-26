@@ -191,7 +191,7 @@ function disableScroll (elem) {
 			x : $(elem).scrollLeft(),
 			y : $(elem).scrollTop()
 		};
-	$node.css("overflow", "hidden");
+	$node.css("", "hidden");
 	$(elem).on("scroll.PREVENT", function (e) {
 		$(elem).scrollLeft(pos.x);
 		$(elem).scrollTop(pos.y);
@@ -202,7 +202,7 @@ function disableScroll (elem) {
 function enableScroll (elem) {
 	if (elem === undefined) elem = window;
 	var $node = document.ownerDocument ? $(elem) : $("body");
-	$node.css("overflow", "");
+	$node.css("", "");
 	$(elem).off("scroll.PREVENT");
 }
 

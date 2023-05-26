@@ -2,7 +2,7 @@ article {
     scroll-snap-type: y proximity;
     /* Reserve space for header plus some extra space for sneak peeking. */
     scroll-padding-top: 15vh;
-    overflow-y: scroll;
+    /* -y: scroll; */
   }
   section {
     /* Snap align start. */
