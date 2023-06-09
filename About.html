@@ -26,6 +26,7 @@
  <link rel="stylesheet" href="./CSS/aos.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
  <link rel="stylesheet" href="./CSS/cookie.css">
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
  <style>
   * {
       box-sizing: border-box
@@ -207,7 +208,7 @@ padding-top: 0px;
 <div class="display-1 container-fluid d-flex justify-content-center">
     <display-1><style> 
       .display-1 {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: BRCobane-Medium;
         color: #040307;
         text-align: center;
         padding-left: 0px;
@@ -246,10 +247,11 @@ padding-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
     width: 70%;
-    font-size: 1.5rem
+    font-size: 1.5rem;
+    font-family: BRCobane-Medium;
     ">
    
- Thinking about web3 or Ai? Lets talk about it! 
+De-Fi should be simple.
   
        </p>
  <!--🏁🔴   All Sreens Headline Text 🔴🏁 ---------------------->  
@@ -289,24 +291,96 @@ padding-top: 0px;
        </div> 
 
      
-<div class="d-flex justify-content-center form-row align-items-center">
+       <div class="d-flex justify-content-center form-row align-items-center">
         <div class="d-flex justify-content-center form-row align-items-center">
           <div class="col-auto">
-            <input type="text" class="form-control mb-2" id="textInput"  placeholder="Subscribe for updates!" style="transform: translateY(17px);border-radius: 999px;">
-            <label class="sr-only" for="inlineFormInput" style="transform: translateX(16px);"></label>
+            <div class="d-flex justify-content-center form-row align-items-center">
+            <p style=" 
+            margin-top: 1rem;
+            font-family: 'BRCobane-Medium';
+            margin-bottom: -6px;
+            color: #000000;
+            ">Subscribe for Updates</p>
+            </div>
+            <input type="text" class="form-control mb-2" id="textInput"  textInput="textInput" required  placeholder="Please enter your Email" style="transform: translateY(17px);  border-radius: 999px; font-family: BRCobane-Medium !important; text-align: center; width: 219px;">
+            <label class="sr-only" for="inlineFormInput" style="transform: translateX(17px);"></label>
             <div class="col-auto">
               <!-- Button for subscription -->
-              <button id="myButton" type="submit" class="btn btn-primary mb-2" style="transform: translateX(58px); border-radius: 999px;">Submit</button>
+              <div class="d-flex justify-content-center">
+              <button id="myButton" type="submit" class="btn btn-primary mb-2" style="border-radius: 999px; margin: 5px; transform: translateY(-9px); font-family: BRCobane-Medium !important; text-align: center;">Submit</button>
+            </div>
             </div>
           </div>
         </div>
-</div>
-
-
-      <script> document.getElementById("myButton").onclick = function() {
-        var myEmail = document.getElementById("textInput").value
-        console.log(document.getElementById('textInput').value);
-    };  </script>
+       </div>
+    
+    
+    
+        <script type="module">
+     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js";
+     import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-database.js";
+     // TODO: Add SDKs for Firebase products that you want to use
+     // https://firebase.google.com/docs/web/setup#available-libraries
+    
+     // Your web app's Firebase configuration
+     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+     const firebaseConfig = {
+       apiKey: "AIzaSyDoD0rX8HTUOVkdNCK4wYCNV3ynKA2ttEI",
+       authDomain: "blockspectorsite.firebaseapp.com",
+       databaseURL: "https://blockspectorsite-default-rtdb.europe-west1.firebasedatabase.app",
+       projectId: "blockspectorsite",
+       storageBucket: "blockspectorsite.appspot.com",
+       messagingSenderId: "314864375763",
+       appId: "1:314864375763:web:d2a0b823a2649baf3f8126",
+       measurementId: "G-M7WV116X82"
+     };
+    
+     firebase.initializeApp(firebaseConfig);
+    
+    // Function to push data to Firebase
+    function pushToFirebase(data) {
+      // Get a reference to the database
+      const database = firebase.database();
+    
+      // Generate a unique key for the data
+      const newKey = database.ref().push().key;
+    
+      // Create an object with the data to be pushed
+      const newData = {
+        key: newKey,
+        data: data
+      };
+    
+      // Push the data to the database
+      database.ref('yourDataNode/' + newKey).set(newData)
+        .then(() => {
+          console.log('Data pushed to Firebase successfully!');
+        })
+        .catch(error => {
+          console.error('Error pushing data to Firebase:', error);
+        });
+    }
+    
+    // Example usage
+    document.getElementById("myButton").onclick = function() {
+      var inputData = document.getElementById("textInput").value;
+      console.log(inputData);
+      
+      // Push the data to Firebase
+      pushToFirebase(inputData);
+    };
+    
+    
+      // Reference to the database service 
+    
+    
+    
+    // Save Email to Firebase
+    
+    
+    
+        </script>
 
 
   <pre>
