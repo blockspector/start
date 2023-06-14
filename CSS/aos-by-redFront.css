@@ -82,14 +82,14 @@ font-family: BRCobane-Medium;
     z-index: index 2;
   }
 
-  .containerA {
+  .containerAFront {
     /* background: radial-gradient(circle, rgb(219, 84, 6) 0%, rgba(255, 64, 0, 0.84) 100%); */
     /* background-color: #ffd500;  */
-    background-color: #e0e7ff;
+    background-color: #ffffff;
     color: #000000;
     position:relative;
-    width:95%;
-    border-radius: 31px;
+    width:100%;
+    /* border-radius: 31px; */
     margin: auto;
     z-index: index 2;
   }

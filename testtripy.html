@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="./Img/favicon.ico">
+  <!-- CSS only  Any change? -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Dropdown Button From WEB Still editing !-->
+  <!-- Bootstrap JS CDN -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./CSS/Nav.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+
+
+  <!-- Font CSS  -->
+  <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+  integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Blockspector</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/disappearReappear.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/move.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <link rel="stylesheet" href="./CSS/aos-by-red.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link rel="stylesheet" href="./CSS/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./CSS/cookie.css">
+  <link rel="stylesheet" href="./CSS/styleCarousel.css">
+  <link rel="stylesheet" href="./CSS/TextFadeDefi.css">
+  <link rel="stylesheet" href="./CSS/iFrameDefi.css">
+  <script src="./CSS/NabVBarChange.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Prevent scrolling */
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99;
+    }
+
+    .display-1 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 500;
+      font-family: 'BRCobane-Medium', sans-serif;
+      z-index: 99;
+    }
+    ul {
+    position: absolute;
+    z-index: 2;
+}
+
+
+  </style>
+
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+
+</head>
+
+<body translate="no">
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js'></script>
+  <script src='https://klevron.github.io/codepen/three.js/OrbitControls.js'></script>
+  <script id="rendered-js">
+ var scene, camera, renderer;
+
+const nbTrucs = 1;
+const nbObjects = 25,
+  objectMinRadius = 1,
+  objectRadiusCoef = 1.5,
+  objectThickness = 0.6,
+  objectDepth = 0.1;
+const animationDuration = 9,
+  animationDelay = 0.1;
+
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(30, 800 / 600, 0.1, 1000); // Set fixed aspect ratio
+  renderer = new THREE.WebGLRenderer({
+    antialias: false
+  });
+  renderer.setSize(800, 600); // Set fixed size
+  document.body.appendChild(renderer.domElement);
+
+  initScene();
+
+  animate();
+};
+
+function initScene() {
+  scene = new THREE.Scene();
+
+  initLights();
+
+  camera.position.z = 150;
+
+  for (var i = 0; i < nbTrucs; i++) {
+    var truc = new Truc();
+    scene.add(truc.o3d);
+  }
+}
+
+function initLights() {
+  const lightIntensity = 0.5;
+  const lightDistance = 300;
+
+  scene.add(new THREE.AmbientLight(0x005eff));
+
+  var light;
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 100, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, -100, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(100, 0, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(-100, 0, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, 100);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, -100);
+  scene.add(light);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  renderer.render(scene, camera);
+};
+
+function Truc() {
+  this.init();
+}
+
+Truc.prototype.init = function() {
+  this.o3d = new THREE.Object3D();
+  var material = new THREE.MeshStandardMaterial({
+    color: 0x00adff,
+    roughness: 0.4,
+    metalness: 0.9
+  });
+
+  for (var i = 0; i < nbObjects; i++) {
+    var geometry = triangleGeometry(objectMinRadius + objectRadiusCoef * i, objectThickness, objectDepth);
+    var mesh = new THREE.Mesh(geometry, material);
+
+    TweenMax.to(mesh.rotation, animationDuration, {
+      y: Math.PI * 2,
+      z: Math.PI * 2,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      delay: i * animationDelay
+    });
+
+    this.o3d.add(mesh);
+  }
+};
+
+function triangleGeometry(radius, thickness, depth) {
+  var shape = new THREE.Shape();
+  var r = radius + thickness;
+  var y = Math.sin(-Math.PI / 6) * r;
+  var x = Math.cos(Math.PI / 6) * r;
+  shape.moveTo(0, r);
+  shape.lineTo(-x, y);
+  shape.lineTo(x, y);
+  shape.lineTo(0, r);
+
+  var hole = new THREE.Path();
+  r = radius;
+  y = Math.sin(-Math.PI / 6) * r;
+  x = Math.cos(Math.PI / 6) * r;
+  hole.moveTo(0, r);
+  hole.lineTo(-x, y);
+  hole.lineTo(x, y);
+  hole.lineTo(0, r);
+
+  shape.holes.push(hole);
+
+  var extrudeSettings = {
+    steps: 1,
+    depth: depth,
+    bevelEnabled: true,
+    bevelThickness: 2,
+    bevelSize: 1,
+    bevelSegments: 1
+  };
+  var geometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+  geometry.translate(0, 0, -depth / 2);
+  return geometry;
+}
+
+init();
+
+  </script>
+
+  <div class="display-1 container-fluid d-flex sticky-top">
+    <h1 class="display-1">Ai Revolution</h1>
+    </div>  

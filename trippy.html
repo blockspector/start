@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="./Img/favicon.ico">
+  <!-- CSS only  Any change? -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Dropdown Button From WEB Still editing !-->
+  <!-- Bootstrap JS CDN -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./CSS/NavFront.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+
+
+  <!-- Font CSS  -->
+  <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+  integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Blockspector</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/disappearReappear.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/move.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <link rel="stylesheet" href="./CSS/aos-by-redFront.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link rel="stylesheet" href="./CSS/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./CSS/cookie.css">
+  <link rel="stylesheet" href="./CSS/styleCarousel.css">
+  <link rel="stylesheet" href="./CSS/TextFadeDefi.css">
+  <link rel="stylesheet" href="./CSS/iFrameDefi.css">
+  <script src="./CSS/NabVBarChange.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-title" content="CodePen">
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      /* overflow: hidden; Prevent scrolling */
+      overflow-x: hidden;
+    }
+
+    canvas {
+   
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #0b0b0b00;
+    color: #ffffff;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    /* margin: auto; */
+    z-index: index 2;
+    align-items: center;
+    justify-content: center!important;
+    display: flex!important;
+    transform: translate(0px, -130px); 
+   
+    }
+
+    .display-1 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 500;
+      font-family: 'BRCobane-Medium', sans-serif;
+      z-index: 99;
+    }
+
+
+    @media all and (max-width:768px) {
+    .phone {
+      display: none;
+
+    }
+  }
+ 
+@media screen and (max-width:768px) {
+    .navbar {
+      display: none;
+    }
+    .bigText {
+    display: none;
+    }
+.rendered-js {
+display: none;
+  }
+  .navbarDontShowWhenHam{
+    display: none;
+  }
+}
+  @media all and (min-width:769px) {
+    .hamburger-menu {
+      display: none;
+
+    }
+  }
+ 
+  @media all and (min-width:1231px) {
+  .hideWhenLessthen1231show575 {
+  display: none;
+
+}
+}
+
+
+@media screen and (max-width:768px) {
+  .hideWhenLessthen1231show575 {
+    display: none;
+  }
+}
+
+
+  @media screen and (max-width:768px) {
+    .textfadeFull {
+      display: none;
+    }
+    .container4 {
+      font-size: calc(6px + 1.5vw);
+      width: 20em;
+  }
+}
+  @media all and (min-width:577px) {
+    .textfadeMin {
+      display: none;
+      
+
+    }
+  }
+ 
+  @media screen and (max-width:768px) {
+    .logoBig {
+      display: none;}
+    
+    }
+  
+  @media all and (min-width:768px) {
+    .logoSmall {
+      display: none;
+
+ 
+    }
+    }
+    @media screen and (max-width:1230px) {
+      .cardfullPhone {
+        display: none;
+      }
+    }
+  @media screen and (max-width:1310px) {
+    .cardfull {
+      display: none;
+    }
+    .container4 {
+      width: 40em;
+  }
+  @media screen and (max-width:1350px) {
+    .cardfullPlus {
+      display: none;
+    }
+  }
+  @media screen and (max-width:770px) {
+    .cardmed {
+      display: none;}
+     
+     
+    }
+    @media screen and (max-width:374px) {
+      .list-group-horizontal {
+        display: none; }
+    }
+  } 
+ 
+
+  
+
+  </style>
+
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+
+</head>
+
+<body translate="no">
+<!-- Mobile    -->
+<div class="hamburger-menu" style=" 
+ background-color: rgba(255, 255, 255, 0.05);
+ border-bottom: 1px solid rgb(85 85 85 / 27%);
+ width: 100%;
+ backdrop-filter: blur(9px);
+ -webkit-backdrop-filter: blur(9px);
+ position: fixed;
+ width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+ align-content: center;
+justify-content: center;
+display: flex;
+ z-index: 9;
+ ">
+ <div>
+    <a href="https://www.blockspector.io/"><img href="" class="hamburger-menu" 
+    src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" style="
+      margin-top: 15px;
+      transform: translate(0px, -6px);
+   ;
+  
+  "/></a>
+ </div>
+</div>
+ <!-- Main Logo for Desktop    -->
+
+    <div class="textfadeFull r1"style="
+    align-content: center;
+    justify-content: center;
+    display: flex;>" >
+        <!-- <div>   
+            <a href="https://www.blockspector.io/"><img href="" class="textfadeFull"
+               src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" /></a>
+        </div> -->
+        <div class="textfadeFull">
+          
+        </div>
+      </div>
+</a>
+ <!-- Main Logo for Desktop + mobile simple switch    -->
+  <title>Blockspector.io</title>
+
+  <div class="mt-0 sticky-top" style="
+    padding-left: 0px;
+"> 
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top" style="
+padding-top: 0px;
+">
+    <div class="container-fluid nav justify-content-center sticky-top" style="
+    padding-right: 0px;
+">
+        <a href="#" class="navbar-brand" style="margin-right: 0px" ;="">
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+          <div class="navbar-nav justify-content-center" style="
+          padding-top: 7px;
+      ">
+       <li class="justify-content-center">
+        <a href="https://www.blockspector.io/">
+          <img href="" class="textfadeFull"
+          src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="25" height="27" style="transform: translate(-6px,2px)" /></a>
+      </li>
+              <li class="nav-item dropdown justify-content-center">
+                <a class="nav-link justify-content-center" href="https://www.blockspector.io/" role="button" aria-expanded="false" 
+                style="padding-right: 21px !important;
+                padding-left: 0px !important;
+                 color: #ffffff;
+                  font-family: BRCobane-Medium !important;
+              
+              ">
+                  Blockspector
+                </a>
+              </li>
+                <li class="nav-item dropdown justify-content-center">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 40px !important;padding-left: 40px !important;
+                ">
+                    About
+                  </a>
+                  <ul class="dropdown-menu justify-content-center">
+                    <li><a class="dropdown-item" href="./About.html">💿 About</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown justify-content-center">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 40px!important;padding-left: 40px !important;
+                ">
+                    Explore
+                  </a>
+                  <ul class="dropdown-menu justify-content-center">
+                    <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
+                  </ul>
+                  </li><li class="nav-item dropdown justify-content-center">
+                    <a class="nav-link" href="#" role="button" aria-expanded="false" 
+                    style="padding-left: 40px !important;">
+                      Contact
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="">✉️ Email</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a Call</a></li>
+                    </ul>
+            </li></div>
+        </div>
+    </div>
+</nav>
+</div>
+
+
+  <!-- End of Navbar  -->
+
+  <title>Blockspector.io</title>
+
+
+
+
+  <div class="hamburger-menu" style="z-index: index 1";>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="./About.html">💿 About</a></li>
+      <li><a class="menu__item" href="./DeFi.html">🪐 Current Projects</a></li>
+      <li><a class="menu__item" href="./ScheduleACall.html">🏄‍♂️ Schedule a Call</a></li>
+      <li><a class="menu__item" href="mailto:hello@Blockspector.io?subject=Blockspector.io%20Email%20request">✉️ Email</a></li>
+      <li><a class="menu__item" href="https://www.blockspector.io/">🌍 Home</a></li>
+    </ul>
+  </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js'></script>
+  <script src='https://klevron.github.io/codepen/three.js/OrbitControls.js'></script>
+ 
+  <div class="container-fluid d-flex justify-content-center"> 
+  <script id="rendered-js">
+var scene, camera, renderer;
+
+const nbTrucs = 1;
+const nbObjects = 25,
+  objectMinRadius = 1,
+  objectRadiusCoef = 1.5,
+  objectThickness = 0.6,
+  objectDepth = 0.1;
+const animationDuration = 9,
+  animationDelay = 0.1;
+
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 2000);
+  renderer = new THREE.WebGLRenderer({
+    antialias: false, // Disable antialiasing for better performance
+    precision: "lowp", // Set lower precision for mobile devices
+    powerPreference: "low-power" // Optimize for power saving on mobile devices
+  });
+
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  window.addEventListener('resize', onWindowResize);
+
+  document.body.appendChild(renderer.domElement);
+
+  initScene();
+
+  animate();
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function initScene() {
+  scene = new THREE.Scene();
+
+  initLights();
+
+  camera.position.z = 100 * (window.innerWidth / 350);
+
+  const objectScale = window.innerWidth / 800;
+
+  for (var i = 0; i < nbTrucs; i++) {
+    var truc = new Truc(objectScale);
+    scene.add(truc.o3d);
+  }
+}
+
+function initLights() {
+  const lightIntensity = 0.5;
+  const lightDistance = 400;
+
+  scene.add(new THREE.AmbientLight(0xFFFFFF));
+
+  var light;
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 100, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, -100, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(100, 0, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(-100, 0, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, 100);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, -100);
+  scene.add(light);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  renderer.render(scene, camera);
+}
+
+function Truc(objectScale) {
+  this.init(objectScale);
+}
+
+Truc.prototype.init = function(objectScale) {
+  this.o3d = new THREE.Object3D();
+  var material = new THREE.MeshStandardMaterial({
+    color: 0x0853FE
+  });
+
+  for (var i = 0; i < nbObjects; i++) {
+    var geometry = triangleGeometry(objectMinRadius + objectRadiusCoef * i * objectScale, objectThickness * objectScale, objectDepth * objectScale);
+    var mesh = new THREE.Mesh(geometry, material);
+
+    TweenMax.to(mesh.rotation, animationDuration, {
+      y: Math.PI * 2,
+      z: Math.PI * 2,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      delay: i * animationDelay
+    });
+
+    this.o3d.add(mesh);
+  }
+};
+
+function triangleGeometry(radius, thickness, depth) {
+  var shape = new THREE.Shape();
+  var r = radius + thickness;
+  var y = Math.sin(-Math.PI / 6) * r;
+  var x = Math.cos(Math.PI / 6) * r;
+  shape.moveTo(0, r);
+  shape.lineTo(-x, y);
+  shape.lineTo(x, y);
+  shape.lineTo(0, r);
+
+  var hole = new THREE.Path();
+  r = radius;
+  y = Math.sin(-Math.PI / 6) * r;
+  x = Math.cos(Math.PI / 6) * r;
+  hole.moveTo(0, r);
+  hole.lineTo(-x, y);
+  hole.lineTo(x, y);
+  hole.lineTo(0, r);
+
+  shape.holes.push(hole);
+
+  var extrudeSettings = {
+    steps: 1,
+    depth: depth,
+    bevelEnabled: true,
+    bevelThickness: 2,
+    bevelSize: 1,
+    bevelSegments: 1
+  };
+  var geometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+  geometry.translate(0, 0, -depth / 2);
+  return geometry;
+}
+
+init();
+
+
+  </script>
+  </div>
+   <div class="display-4 container-fluid d-flex justify-content-center">
+    <display-4 style="color: #ffffff; z-index: 1; transform: translate(0px, -356px); "> Ai Revolution</display-4>
+    </div>  
+    <div class="d-flex justify-content-center bd-highlight mb-3 ">
+      <li class="text-sm mr-2 px-2 border2001 rounded-full list-unstyled d-flex rounded-full list-unstyled d-flex list-group-horizontal" 
+      style="color: #ffffff;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-left: auto;
+      transform: translate(0px, -335px);
+      
+      ">How can Ai help you?</li>
+      </div>
+</div> 
+
+
+              <pre>
+  
+  
+  
+              </pre>
+    <!-- End of Section A   -->
+  </div>
+  
+
+
+
+
+  
+   
+
+  
+
+
+ <!--🔴 🛑 Script for AOS Do not move! 🛑 🔴 -->
+      <script src="./aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 3000,
+          once: true,
+        });
+      </script>
+
+
+
+
+    <div class="">
+      <footer class="d-flex justify-content-between align-items-center py-x border-top flex-wrap " data-aos="fade-up" data-aos-duration="700" data-aos-once="false" data-aos-offset="4600" style="padding-left: 15px;padding-right: 15px; font-family: BRCobane-Medium !important;">
+        
+           <p class="col-md-4 mb-0 text-muted justify-content-start " style="font-size :9px; color: #000000; margin-top: 5px;">© 2023 Blockspector Limited 
+           Blockspector Limited is a company registered in England and Wales (No. 14204416). </p>
+            <style>
+    @font-face {
+      font-family: BRCobane-Medium;
+      src:url(./BRCobane-Medium.woff)}
+    
+    
+    
+             .h5{
+              
+            
+              margin-left: 2% !important;
+              margin-right: 2% !important;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 0;
+      text-decoration: none !important;
+      font-family: BRCobane-Medium !important;
+      text-align: center;
+    
+    
+    };
+    </style>
+      <a href="./Index.html">
+      <h5 class="justify-content-center h5 flex-wrap " style="padding-top: 13px!important; font-family: BRCobane-Medium !important;">
+        Blockspector
+      </h5> 
+    </a>
+         
+       
+        <ul class="nav col-md-4 justify-content-end flex-wrap " style="padding-top: 10px !important; margin-left: -10px !important; color: #000000; font-family: BRCobane-Medium !important;">
+          <li class="nav-item"><a href="./About.html" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a href="./DeFi.html" class="nav-link px-2 text-muted">Explore</a></li>
+          <!-- <li class="nav-item"><a href="./CurrentProjects.html" class="nav-link px-2 text-muted">Explore</a></li> -->
+          <!-- <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-muted">FAQs</a></li> -->
+        </ul>
+      </footer>
+    </div>
+<!-- THIS IS A SMALL FOOTER UNDERNEATH THE MAIN FOOTER -->
+
+    
+        
+    

@@ -15,6 +15,9 @@
     }
     .bigText {
     display: none;
+    }
+.rendered-js {
+display: none;
   }
   .navbarDontShowWhenHam{
     display: none;
