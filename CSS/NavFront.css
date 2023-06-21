@@ -72,7 +72,7 @@
     --bs-navbar-color: rgb(255, 255, 255) !important;
     background-color: rgb(54 54 54 / 32%);
     border: 1.2px solid rgb(152 152 152 / 16%);
-    width: 589px;
+    width: 700px;
     backdrop-filter: blur(9px);
     -webkit-backdrop-filter: blur(9px);
     font-weight: 500;
@@ -289,7 +289,7 @@ backdrop-filter: blur(5px);
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #1B3EB3;
+  background-color: #0052ff;
   transition-duration: .25s;
 }
 /* Top bar of hamburger menu positioning?  */ 
@@ -390,7 +390,7 @@ src:url(./BRCobane-Medium.woff);
   }
 
 .border2001{
-  border: 2.9px solid #ffffff;
+border: 2.9px solid #0052ff;
   margin: 2px;
   font-weight: 500;
 }
@@ -456,10 +456,17 @@ font-weight: 300;
 line-height: 1.2;
 }
 
+.display-5{
+    font-family: BRCobane-Medium;
+    font-size: calc(4.3rem + 2.7vw) !important;
+    font-weight: 300;
+    line-height: 1.2;
+    }
+
 
 .hamnav {
 
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgb(0 0 0 / 47%);
     border-bottom: 1px solid rgb(85 85 85 / 27%);
     width: 100%;
     backdrop-filter: blur(9px);
@@ -474,9 +481,15 @@ line-height: 1.2;
     z-index: 9;
 }
 
-
-
-
+.btn > a:hover {
+    font-size: 16px !important;
+    background-color: #3b83ff !important; 
+}
+.btn-primary:hover {
+background-color: #033bd5 !important; 
+border: #005cff 1px solid !important;
+transition: 0.3s;
+} 
 
  @import "../node_modules/bootstrap/scss/variables";
  @import "../node_modules/bootstrap/scss/maps";

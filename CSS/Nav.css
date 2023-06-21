@@ -61,18 +61,19 @@
 
 
 .navbar-nav{
-    --bs-navbar-color: rgb(0, 0, 0) !important;
-    background-color: rgb(255 255 255 / 35%);
-    border:1.2px solid rgb(130 130 130 / 44%);
-    width: 589px;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    font-weight: 500;
-    position: sticky;
-    margin-top: 10px;
-    border-radius: 31px;
-    padding-top: 5px;
-    top: 0;
+  --bs-navbar-color: rgb(0, 0, 0) !important;
+  background-color: rgb(255 255 255 / 46%);
+  border: 1.2px solid rgb(0 0 0 / 38%);
+  width: 724px;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  font-weight: 500;
+  position: sticky;
+  margin-top: 10px;
+  border-radius: 31px;
+  padding-top: 5px;
+  top: 0;
+
   
 }
 
@@ -435,6 +436,35 @@ font-weight: 400;
 font-size: 1rem;
 column-span: all;
 }
+
+
+.hamnavWhite {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgb(210 210 210 / 27%);
+  width: 100%;
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  position: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+ justify-content: center;
+ display: flex;
+  z-index: 1;
+}
+
+.btn > a:hover {
+  font-size: 16px !important;
+  background-color: #3b83ff !important; 
+}
+.btn-primary:hover {
+background-color: #033bd5 !important; 
+border: #005cff 1px solid !important;
+transition: 0.3s;
+} 
+
+
 
 
  @import "../node_modules/bootstrap/scss/variables";

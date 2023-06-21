@@ -41,15 +41,27 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
 
   <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      /* overflow: hidden; Prevent scrolling */
+   
+
+    body,html{ 
+      max-height: 800px !important;
       overflow-x: hidden;
+      overflow-y: hidden;
+    
+    
+    
     }
+
+.parent{
+    min-height:60%;
+    max-height: 800px !important;
+    margin:0 auto;
+    overflow-x: hidden;
+  
+
+}
+
+    
 
     canvas {
    
@@ -66,7 +78,7 @@
     align-items: center;
     justify-content: center!important;
     display: flex!important;
-    transform: translate(0px, -70px); 
+    transform: translate(0px, -77px); 
    
     }
 
@@ -141,12 +153,12 @@ padding-top: 0px;
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
           <div class="navbar-nav justify-content-center" style="
-          padding-top: 7px;
+          padding-bottom: 5px;
       ">
        <li class="justify-content-center">
         <a href="https://www.blockspector.io/">
           <img href="" class="textfadeFull"
-          src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="25" height="27" style="transform: translate(-6px,2px)" /></a>
+          src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="25" height="27" style="transform: translate(-6px,5px);" /></a>
       </li>
               <li class="nav-item dropdown justify-content-center">
                 <a class="nav-link justify-content-center" href="https://www.blockspector.io/" role="button" aria-expanded="false" 
@@ -178,17 +190,27 @@ padding-top: 0px;
                   <ul class="dropdown-menu justify-content-center">
                     <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
                   </ul>
-                  </li><li class="nav-item dropdown justify-content-center">
-                    <a class="nav-link" href="#" role="button" aria-expanded="false" 
-                    style="padding-left: 40px !important;">
-                      Contact
+                  </li>
+                  <li class="nav-item dropdown justify-content-center">
+                    <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                    style="padding-right: 23px!important;padding-left: 35px !important;
+                  ">
+                      Pricing
                     </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="">✉️ Email</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="./ScheduleACall.html">🏄&zwj;♂️ Schedule a Call</a></li>
+                    <ul class="dropdown-menu justify-content-center">
+                      <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
                     </ul>
-            </li></div>
+                    </li>
+                 
+                    <a style="
+                    background-color: #005cff;
+                    border-radius: 31px;
+                    font-size: 16px;
+                    height: 40px;
+                    transform: translate(27px, 0px);
+                    " href="./DeFi.html" class="btn btn-primary btn-lg active" role="button"> Get Started
+                    </a>
+          </div>
         </div>
     </div>
 </nav>
@@ -218,6 +240,7 @@ padding-top: 0px;
   </div>
 
 
+
   <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js'></script>
@@ -231,7 +254,7 @@ const nbTrucs = 1;
 const nbObjects = 25,
   objectMinRadius = 1,
   objectRadiusCoef = 1.5,
-  objectThickness = 0.6,
+  objectThickness = 2,
   objectDepth = 0.1;
 const animationDuration = 9,
   animationDelay = 0.1;
@@ -393,33 +416,38 @@ init();
 
   </script>
   </div>
-   <div class="display-4 container-fluid d-flex justify-content-center">
-    <display-4 style="color: #ffffff; z-index: 1; transform: translate(0px, -300px); "> Ai Revolution</display-4>
+   <div class="display-4 container-fluid d-flex justify-content-center hamburger-menu">
+    <display-4 class="hamburger-menu" style="color: #ffffff; z-index: 1; transform: translate(0px, -194px); "> Ai Revolution</display-4>
     </div>  
-    <div class="d-flex justify-content-center bd-highlight mb-3 ">
-      <li class="text-sm mr-2 px-2 border2001 rounded-full list-unstyled d-flex rounded-full list-unstyled d-flex list-group-horizontal" 
-      style="color: #ffffff;
+    <div class="display-5 container-fluid d-flex justify-content-center bigText">
+      <display-5 class="bigText" style="color: #ffffff; z-index: 1; transform: translate(0px, -300px); "> Ai Revolution</display-4>
+      </div>  
+        <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
+    <li class="hamburger-menu text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+    style="color: #0052ff;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translate(0px, -189px);
+    
+    ">Ai Consulting</li>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
+      <li class="bigText text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+      style="color: #0052ff;
       font-weight: 500;
       margin-top: 0px;
       margin-right: auto;
       margin-left: auto;
-      transform: translate(0px, -275px);
+      transform: translate(0px, -300px);
       
-      ">How can Ai help you?</li>
+      ">Ai Consulting</li>
       </div>
-</div> 
 
 
-              <pre>
-  
-  
-  
-              </pre>
+
     <!-- End of Section A   -->
-  </div>
-  
-
-
 
  <!--🔴 🛑 Script for AOS Do not move! 🛑 🔴 -->
       <script src="./aos.js"></script>
