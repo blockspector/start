@@ -464,6 +464,15 @@ border: #005cff 1px solid !important;
 transition: 0.3s;
 } 
 
+.btn2 > a:hover {
+  font-size: 16px !important;
+  background-color: #22e37c !important; 
+}
+.btn-primary2:hover {
+background-color: #07b1d3 !important; 
+border: #005cff 1px solid !important;
+transition: 0.3s;
+} 
 
 
 
