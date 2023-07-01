@@ -1,14 +1,14 @@
 
  
-/* 
-.slide-content .scroller {
+
+/* .slide-content .scroller {
   width: 1024px;
-}
+} */
 
 
- *{
+ /* *{
   border: 1px solid rgba(240, 0, 0, 0.398);
-}    */
+}     */
 
 
 /* Dropdown Button From WEB Still editing */ 
@@ -31,7 +31,13 @@
   display: block;visibility: visible;opacity:1;transform: translateY(0px);transition:.3s ease all;
 }
 
-.dropdown-menu  {display: block;visibility: hidden;opacity:0;transform: translateY(30px);transition:.3s ease all;}
+.dropdown-menu  {display: block;visibility: hidden;opacity:0;transform: translateY(30px);transition:.3s ease all;
+    background-color: #000 !important;
+    --bs-dropdown-border-color: rgb(255 255 255 / 18%) !important;
+
+
+
+}
 
 .dropdown-item {
   display: block;
@@ -40,7 +46,7 @@
   padding-bottom: 2px;
   clear: both;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   text-align: inherit;
   white-space: nowrap;
   border: 0;
@@ -52,40 +58,46 @@
   padding: .25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   text-align: inherit;
   white-space: nowrap;
   background-color: #0055FF;
-  border: 0;
+  border: 1;
+  border-color: #002fff;
 }
 
 
 .navbar-nav{
-  --bs-navbar-color: rgb(0, 0, 0) !important;
-  background-color: rgb(255 255 255 / 46%);
-  border: 1.2px solid rgb(0 0 0 / 38%);
-  width: 724px;
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  font-weight: 500;
-  position: sticky;
-  margin-top: 10px;
-  border-radius: 31px;
-  padding-top: 5px;
-  top: 0;
+
+    --bs-navbar-color: rgb(255, 255, 255) !important;
+    background-color: rgb(54 54 54 / 32%);
+    border: 1.2px solid rgb(152 152 152 / 16%);
+    width: 700px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    font-weight: 500;
+    position: sticky;
+    margin-top: 10px;
+    border-radius: 31px;
+    padding-top: 5px;
+    top: 0;
 
   
 }
 
+.nav-item  {
+    color: rgb(255, 255, 255) !important;
+}
+
 .nav-item > a:hover {
-  color: rgb(0, 0, 0);
-  color: #000000;
+  color: rgb(255, 255, 255);
+
 
 
 }
 
 .h5{ 
- color: #000;
+ color: #ffffff;
  margin-right: 2rem;
  
 
@@ -158,7 +170,7 @@ body{
   /* background-image: url(../blueMedium.png); */
   /* background-image: url(../bueg2.jpg); */
   /* Below is 41KB version of the same image */
-   background-image: url(../bueg2Large.jpeg); 
+  background-color: rgb(0, 0, 0);
 
   background-size:100% auto; 
   background-repeat: no-repeat;
@@ -202,7 +214,8 @@ position: fixed;
 bottom: 0;
 left: 0;
 padding: 0rem;
-background-color: rgba(255, 255, 255, 0.779);
+background-color: rgb(0 0 0 / 78%);
+border-top: #282828 !important;
 width: 100%;
 backdrop-filter: blur(5px);
 -webkit-backdrop-filter: blur(5px);
@@ -268,7 +281,7 @@ backdrop-filter: blur(5px);
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 99;
+  z-index: 101;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -277,7 +290,7 @@ backdrop-filter: blur(5px);
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #1B3EB3;
+  background-color: #0052ff;
   transition-duration: .25s;
 }
 /* Top bar of hamburger menu positioning?  */ 
@@ -305,7 +318,7 @@ backdrop-filter: blur(5px);
   margin: 0;
   padding: 80px 0;
   list-style: none;
-  background-color: #ffffff4c;
+  background-color: #000000ad;
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   transition-duration: .35s;
@@ -313,7 +326,7 @@ backdrop-filter: blur(5px);
   border-radius: 0px;
   border-color: #000000;
   border-width: 2px;
-  z-index: 1;
+  z-index: 100;
 }
 
 
@@ -322,7 +335,7 @@ backdrop-filter: blur(5px);
   margin-left: auto; 
   margin-right: auto;
   padding: 12px 20px;
-  color: rgb(0, 0, 0);
+  color: rgb(255 255 255);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 500;
   font-size: 27px;
@@ -377,8 +390,8 @@ src:url(./BRCobane-Medium.woff);
     margin-top: 0px;
   }
 
-.border200{
-  border: 2.9px solid #002fff;
+.border2001{
+border: 2.9px solid #0052ff;
   margin: 2px;
   font-weight: 500;
 }
@@ -439,31 +452,39 @@ column-span: all;
 
 
 .display-4 {
-  font-size: calc(2.7rem + 2.7vw) !important;
-  font-weight: 300;
-  line-height: 1.2;
-  }
+font-size: calc(2.7rem + 2.7vw) !important;
+font-weight: 300;
+line-height: 1.2;
+}
+
+.display-5{
+    font-family: BRCobane-Medium;
+    font-size: calc(4.3rem + 2.7vw) !important;
+    font-weight: 300;
+    line-height: 1.2;
+    }
 
 
-.hamnavWhite {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgb(210 210 210 / 27%);
-  width: 100%;
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(9px);
-  position: fixed;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  align-content: center;
- justify-content: center;
- display: flex;
-  z-index: 1;
+.hamnav {
+
+    background-color: rgb(0 0 0 / 47%);
+    border-bottom: 1px solid rgb(85 85 85 / 27%);
+    width: 100%;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    z-index: 9;
 }
 
 .btn > a:hover {
-  font-size: 16px !important;
-  background-color: #3b83ff !important; 
+    font-size: 16px !important;
+    background-color: #3b83ff !important; 
 }
 .btn-primary:hover {
 background-color: #033bd5 !important; 
@@ -471,16 +492,12 @@ border: #005cff 1px solid !important;
 transition: 0.3s;
 } 
 
-.btn2 > a:hover {
-  font-size: 16px !important;
-  background-color: #22e37c !important; 
+.containerA {
+    color: white;
+    background-color: #015cff;
+    border-radius: 23px;
+    margin: 15px;
 }
-.btn-primary2:hover {
-background-color: #07b1d3 !important; 
-border: #005cff 1px solid !important;
-transition: 0.3s;
-} 
-
 
 
  @import "../node_modules/bootstrap/scss/variables";
