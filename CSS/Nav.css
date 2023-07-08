@@ -63,7 +63,7 @@
 .navbar-nav{
   --bs-navbar-color: rgb(0, 0, 0) !important;
   background-color: rgb(255 255 255 / 46%);
-  border: 1.2px solid rgb(0 0 0 / 38%);
+  border: 1.2px solid rgb(180 180 180 / 69%);
   width: 724px;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
