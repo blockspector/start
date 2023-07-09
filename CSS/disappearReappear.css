@@ -1,6 +1,8 @@
 /* Disappear Reappear CSS Code */  
   
-
+*{border-color: chartreuse;
+  border-width: 1px;
+}
 
 @media all and (max-width:768px) {
     .phone {
