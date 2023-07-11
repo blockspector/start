@@ -12,7 +12,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="./CSS/NavFront.css">
-  <link rel="stylesheet" type="text/css" href="./CSS/aiOnly.css">
   <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
@@ -46,7 +45,7 @@
 
     body,html{ 
       max-height: 800px !important;
-      /* overflow-x: hidden; This is nto good on safari */
+      overflow-x: hidden;
  
     
     
@@ -248,197 +247,217 @@ padding-top: 0px;
   <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js'></script>
 
  
+  <div class="container-fluid d-flex justify-content-center"> 
+  <script id="rendered-js">
+var scene, camera, renderer;
 
+const nbTrucs = 1;
+const nbObjects = 25,
+  objectMinRadius = 1,
+  objectRadiusCoef = 1.5,
+  objectThickness = 2,
+  objectDepth = 0.1;
+const animationDuration = 9,
+  animationDelay = 0.1;
+
+function init() {
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 0.1, 2000);
+  renderer = new THREE.WebGLRenderer({
+    antialias: false, // Disable antialiasing for better performance
+    precision: "lowp", // Set lower precision for mobile devices
+    powerPreference: "low-power" // Optimize for power saving on mobile devices
+  });
+
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+
+  window.addEventListener('resize', onWindowResize);
+
+  document.body.appendChild(renderer.domElement);
+
+  initScene();
+
+  animate();
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function initScene() {
+  scene = new THREE.Scene();
+
+  initLights();
+
+  camera.position.z = 100 * (window.innerWidth / 350);
+
+  const objectScale = window.innerWidth / 800;
+
+  for (var i = 0; i < nbTrucs; i++) {
+    var truc = new Truc(objectScale);
+    scene.add(truc.o3d);
+  }
+}
+
+function initLights() {
+  const lightIntensity = 0.5;
+  const lightDistance = 400;
+
+  scene.add(new THREE.AmbientLight(0xFFFFFF));
+
+  var light;
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 100, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, -100, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(100, 0, 0);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(-100, 0, 0);
+  scene.add(light);
+
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, 100);
+  scene.add(light);
+  light = new THREE.PointLight(randomColor({
+    luminosity: 'light'
+  }), lightIntensity, lightDistance);
+  light.position.set(0, 0, -100);
+  scene.add(light);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  renderer.render(scene, camera);
+}
+
+function Truc(objectScale) {
+  this.init(objectScale);
+}
+
+Truc.prototype.init = function(objectScale) {
+  this.o3d = new THREE.Object3D();
+  var material = new THREE.MeshStandardMaterial({
+    color: 0x0853FE
+  });
+
+  for (var i = 0; i < nbObjects; i++) {
+    var geometry = triangleGeometry(objectMinRadius + objectRadiusCoef * i * objectScale, objectThickness * objectScale, objectDepth * objectScale);
+    var mesh = new THREE.Mesh(geometry, material);
+
+    TweenMax.to(mesh.rotation, animationDuration, {
+      y: Math.PI * 2,
+      z: Math.PI * 2,
+      ease: Power1.easeInOut,
+      repeat: -1,
+      yoyo: true,
+      delay: i * animationDelay
+    });
+
+    this.o3d.add(mesh);
+  }
+};
+
+function triangleGeometry(radius, thickness, depth) {
+  var shape = new THREE.Shape();
+  var r = radius + thickness;
+  var y = Math.sin(-Math.PI / 6) * r;
+  var x = Math.cos(Math.PI / 6) * r;
+  shape.moveTo(0, r);
+  shape.lineTo(-x, y);
+  shape.lineTo(x, y);
+  shape.lineTo(0, r);
+
+  var hole = new THREE.Path();
+  r = radius;
+  y = Math.sin(-Math.PI / 6) * r;
+  x = Math.cos(Math.PI / 6) * r;
+  hole.moveTo(0, r);
+  hole.lineTo(-x, y);
+  hole.lineTo(x, y);
+  hole.lineTo(0, r);
+
+  shape.holes.push(hole);
+
+  var extrudeSettings = {
+    steps: 1,
+    depth: depth,
+    bevelEnabled: true,
+    bevelThickness: 2,
+    bevelSize: 1,
+    bevelSegments: 1
+  };
+  var geometry = new THREE.ExtrudeBufferGeometry(shape, extrudeSettings);
+  geometry.translate(0, 0, -depth / 2);
+  return geometry;
+}
+
+init();
+
+
+  </script>
+  </div>
    <div class="display-4 container-fluid d-flex justify-content-center hamburger-menu">
-    <display-4 class="hamburger-menu" style="color: #ffffff; z-index: 1; transform: translate(0px, 49px); margin-top: 69px; "> Ai Revolution</display-4>
+    <display-4 class="hamburger-menu" style="color: #ffffff; z-index: 1; transform: translate(0px, -194px); "> Ai Revolution</display-4>
     </div>  
     <div class="display-5 container-fluid d-flex justify-content-center bigText">
-      <display-5 class="bigText" style="color: #ffffff; z-index: 1;transform: translate(0px, 74px); "> Ai Revolution</display-4>
+      <display-5 class="bigText" style="color: #ffffff; z-index: 1; transform: translate(0px, -300px); "> Ai Revolution</display-4>
       </div>  
- 
-  
+        <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
+    <li class="hamburger-menu text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+    style="color: #0052ff;
+    font-weight: 500;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translate(0px, -189px);
+    
+    ">Ai Consulting</li>
+    </div>
+    <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
+      <li class="bigText text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+      style="color: #0052ff;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-left: auto;
+      transform: translate(0px, -300px);
+      
+      ">Ai Guide</li>
+      </div>
+      <div class="display-4 container-fluid d-flex justify-content-center">
+        <display-4 class="" style="color: #ffffff; z-index: 1; transform: translate(0px, -246px);; ">How to Ai</display-4>
+        </div>  
 
         <div class="d-flex justify-content-center"data-aos="fade-down"  data-aos-duration="600" data-aos-once="false" data-aos-offset="330">
       <iframe 
       src="./trippyColour.html" 
-      style="border:none; transform: translate(0px, 0px);" name="TrippyColour" scrolling="no" 
+      style="border:none; transform: translate(0px, -250px);" name="TrippyColour" scrolling="no" 
       frameborder="0" marginheight="0px" marginwidth="0px" 
       height="400px" 
       width="400px"
       >
     </iframe>
-    </div>
-
-
-    <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
-      <a style="
- background-color: #005cff;
-    border-radius: 31px;
-    font-size: 16px;
-    height: 40px;
-    transform: translate(0px, 0px);
-    margin-right: 4px;
-      " href="./DeFi.html" class="btn btn-primary btn-lg active" role="button"> Get Started
-      </a>        
-      <a style="
-      background-color: #030303;
-    border-color: #7b7b7b;
-    color: #ffffff;
-    border-radius: 31px;
-    font-size: 16px;
-    height: 40px;
-    transform: translate(0px, 0px);
-    margin-right: 15px;
-      " href="./DeFi.html" class="btn btn-primary2 btn-lg active" role="button"> Pricing
-      </a>        
-      </div>
-
-
-
-
-
-    <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
-      <li class="hamburger-menu text-sm mr-2 px-2 border200g rounded-full list-unstyled" 
-      style="color: #11ef8f;
-      font-weight: 500;
-      margin-top: 0px;
-      margin-right: auto;
-      margin-left: auto;
-      transform: translate(0px, -98px);
-      
-      ">Ai Upload</li>
-      </div>
-
-
-
-
-      <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
-        <li class="bigText text-sm mr-2 px-2 border200g rounded-full list-unstyled" 
-        style="color: #11ef8f;
-        font-weight: 500;
-        margin-top: 0px;
-        margin-right: auto;
-        margin-left: auto;
-        transform: translate(0px, -115px);
-        
-        ">Ai Upload</li>
-        
-        
-        </div>
-
-
-        <div class="container7Header">
-          <p class="container-fluid d-flex justify-content-center align-items-center" style="
-           color: #ffffff;
-    /* margin: 30px; */
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0px;
-    width: 80%;
-    font-size: 1.5rem;
-    transform: translate(0px, -25px);
-          ">
-   Upload & Ask, easily get key insights on your data.
-        
-             </p>
-             </div>
-
-
-              <!-- -------------⚠️----- Safe Scaleable Secure DESKTOP 🖥️  ---------⚠️--------------->
-              <div class="container8 container-fluid d-flex justify-content-center">
-
-                         
-                                  
-                <div class="container8 d-flex justify-content-center bigText"
-                style="
-                margin-top: 30px;
-            
-              
-                ">
-                  <div class="bigText whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="250" class="p-2 bd-highlight"><h1   style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 4.4rem !important; ">The </h1></div>
-                  <div class="bigText whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="260" class="p-2 bd-highlight"><h1 style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 4.4rem !important; ">De-Fi </h1></div>
-                  <div class="bigText whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="280" class="p-2 bd-highlight"><h1 style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 4.4rem !important;">Wallet You Want 
-                  </h1>
-                  <pre></pre>
-                      </div>
-          
-                  <div class="bigText" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="350" class="p-2 bd-highlight"><h3 style="
-                    text-align: left;
-                    margin: auto;
-                    width: 74.2%;
-                    line-height: 150%;
-                    font-size: 1.3rem !important;
-                    font-family: BRcobane-Medium;
-                    ">   
-                    <!-- Secure by design via <span style="color: #004EFC;"> Blockchain technology.</span>  -->
-                    Interacting with De-Fi<span style="color: #004EFC;"> made easy.</span>
-                    De-Fi Flow is an intuitive savings management tool that makes interacting with De-Fi protocols easy and accessible. 
-                    Compare different De-Fi tokens and watch your savings grow.
-                     All in an intuitive app. 
-                    </h3>
-               <pre></pre>
-                    </div>
-                </div>
-
-
-                <!-- ---☎️  ⚠️---------- Safe Scaleable Secure 2 hamburger-menu Hiiden for Desktop. ☎️  ⚠️  ------------------------->
-                        
-                <div class="container8 d-flex justify-content-center hamburger-menu"
-                style="
-                margin-top: 0px;
-            
-              
-                ">
-                  <div class="hamburger-menu whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="50" class="p-2 bd-highlight"><h1   style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 2rem !important;
-                   ">The 
-                   </h1> </div>
-                  <div class="hamburger-menu whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="80" class="p-2 bd-highlight"><h1 style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 2rem !important; ">De-Fi </h1></div>
-                  <div class="hamburger-menu whiteText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="110" class="p-2 bd-highlight"><h1 style="
-                  text-align: left;
-                  margin: auto;
-                  width: 75%;
-                    font-size: 2rem !important;">Wallet You Want 
-                  </h1>
-                <pre></pre>
-                      </div>
-                  <div class="hamburger-menu" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="210" class="p-2 bd-highlight"><h3 style="
-                    text-align: left;
-                    margin: auto;
-                    width: 74.2%;
-                    line-height: 150%;
-                      font-size: 1.3rem !important;"> Interacting with De-Fi<span style="color: #004EFC;"> made easy.</span>
-                       De-Fi Flow is an intuitive savings management tool that makes interacting with De-Fi protocols easy and accessible. 
-                       Compare different De-Fi tokens and watch your savings grow.
-                        All in an intuitive app. 
-                    </h3>
-
-               <pre></pre>
-                    </div>
-                </div>          
-     
-
-
   </div>
 
      

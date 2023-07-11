@@ -395,6 +395,13 @@ border: 2.9px solid #0052ff;
   font-weight: 500;
 }
 
+
+.border200g{
+  border: 2.9px solid #11ef8f;
+    margin: 2px;
+    font-weight: 500;
+  }
+
 .border400{
   border: 2.9px solid #000000;
   margin: 2px;
@@ -490,6 +497,14 @@ background-color: #033bd5 !important;
 border: #005cff 1px solid !important;
 transition: 0.3s;
 } 
+
+
+.btn-primary2:hover {
+  background-color: #ffffff !important; 
+  color: #000000 !important;
+  border: #ffffff 1px solid !important;
+  transition: 0.3s;
+  } 
 
  @import "../node_modules/bootstrap/scss/variables";
  @import "../node_modules/bootstrap/scss/maps";

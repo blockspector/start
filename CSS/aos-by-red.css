@@ -226,3 +226,10 @@ font-family: BRCobane-Medium;
   margin: auto;
   z-index: index 2;
 }
+
+.display-3{
+
+  font-family: BRCobane-Medium !important;
+  font-size: 2rem !important;
+
+}

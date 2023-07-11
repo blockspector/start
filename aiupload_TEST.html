@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="./Img/favicon.ico">
+  <!-- CSS only  Any change? -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <!-- Dropdown Button From WEB Still editing !-->
+  <!-- Bootstrap JS CDN -->
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./CSS/NavFront.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
+
+
+  <!-- Font CSS  -->
+  <link rel="stylesheet" type="text/css" href="./CSS/stylesheet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" 
+  integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>Blockspector</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/disappearReappear.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/move.css">
+  <link rel="stylesheet" type="text/css" href="./CSS/moveCSSHorizontalPhone.css">
+  <link rel="stylesheet" href="./CSS/aos-by-redFront.css">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+  <link rel="stylesheet" href="./CSS/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="./CSS/cookie.css">
+  <link rel="stylesheet" href="./CSS/styleCarousel.css">
+  <link rel="stylesheet" href="./CSS/TextFadeDefi.css">
+  <link rel="stylesheet" href="./CSS/iFrameDefi.css">
+  <script src="./CSS/NabVBarChange.js"></script>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+  <style>
+   
+
+    body,html{ 
+      max-height: 800px !important;
+
+ 
+    
+    
+    
+    }
+
+.parent{
+    min-height:60%;
+    max-height: 800px !important;
+    margin:0 auto;
+    overflow-x: hidden;
+  
+
+}
+
+    
+
+    canvas {
+   
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: #0b0b0b00;
+    color: #ffffff00;
+    position:relative;
+    width:95%;
+    border-radius: 31px;
+    border-color: #ffffff00;
+    /* margin: auto; */
+    z-index: index 2;
+    align-items: center;
+    justify-content: center!important;
+    display: flex!important;
+    transform: translate(0px, -77px); 
+   
+    }
+
+    .display-1 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff;
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 500;
+      font-family: 'BRCobane-Medium', sans-serif;
+      z-index: 99;
+    }
+
+
+  </style>
+
+  <script>
+    window.console = window.console || function(t) {};
+  </script>
+
+</head>
+
+<body translate="no">
+<!-- Mobile    -->
+<div class="hamburger-menu hamnav" 
+ ">
+ <div>
+    <a href="https://www.blockspector.io/"><img href="" class="hamburger-menu" 
+    src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" style="
+      margin-top: 15px;
+      transform: translate(0px, -6px);
+   ;
+  
+  "/></a>
+ </div>
+</div>
+ <!-- Main Logo for Desktop    -->
+
+    <div class="textfadeFull r1"style="
+    align-content: center;
+    justify-content: center;
+    display: flex;>" >
+        <!-- <div>   
+            <a href="https://www.blockspector.io/"><img href="" class="textfadeFull"
+               src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="46" height="48" /></a>
+        </div> -->
+        <div class="textfadeFull">
+          
+        </div>
+      </div>
+</a>
+ <!-- Main Logo for Desktop + mobile simple switch    -->
+  <title>Blockspector.io</title>
+
+  <div class="mt-0 sticky-top" style="
+    padding-left: 0px;
+"> 
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top" style="
+padding-top: 0px;
+">
+    <div class="container-fluid nav justify-content-center sticky-top" style="
+    padding-right: 0px;
+">
+        <a href="#" class="navbar-brand" style="margin-right: 0px" ;="">
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+          <div class="navbar-nav justify-content-center" style="
+          padding-bottom: 5px;
+      ">
+       <li class="justify-content-center">
+        <a href="https://www.blockspector.io/">
+          <img href="" class="textfadeFull"
+          src="./NewAiBlue23Testpp@5x.png" image-rendering: auto; alt="" width="25" height="27" style="transform: translate(-6px,5px);" /></a>
+      </li>
+              <li class="nav-item dropdown justify-content-center">
+                <a class="nav-link justify-content-center" href="https://www.blockspector.io/" role="button" aria-expanded="false" 
+                style="padding-right: 21px !important;
+                padding-left: 0px !important;
+                 color: #ffffff;
+                  font-family: BRCobane-Medium !important;
+              
+              ">
+                  Blockspector
+                </a>
+              </li>
+                <li class="nav-item dropdown justify-content-center">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 40px !important;padding-left: 40px !important;
+                ">
+                    About
+                  </a>
+                  <ul class="dropdown-menu justify-content-center">
+                    <li><a class="dropdown-item" href="./About.html">💿 About</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown justify-content-center">
+                  <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                  style="padding-right: 40px!important;padding-left: 40px !important;
+                ">
+                    Explore
+                  </a>
+                  <ul class="dropdown-menu justify-content-center">
+                    <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
+                  </ul>
+                  </li>
+                  <li class="nav-item dropdown justify-content-center">
+                    <a class="nav-link justify-content-center" href="#" role="button" aria-expanded="false" 
+                    style="padding-right: 23px!important;padding-left: 35px !important;
+                  ">
+                      Pricing
+                    </a>
+                    <ul class="dropdown-menu justify-content-center">
+                      <li><a class="dropdown-item" href="./DeFi.html"> 🪐 Current Projects</a></li>
+                    </ul>
+                    </li>
+                 
+                    <a style="
+                    background-color: #005cff;
+                    border-radius: 31px;
+                    font-size: 16px;
+                    height: 40px;
+                    transform: translate(27px, 0px);
+                    " href="./DeFi.html" class="btn btn-primary btn-lg active" role="button"> Get Started
+                    </a>
+          </div>
+        </div>
+    </div>
+</nav>
+</div>
+
+
+  <!-- End of Navbar  -->
+
+  <title>Blockspector.io</title>
+
+
+
+
+  <div class="hamburger-menu" style="z-index: index 1";>
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="./About.html">💿 About</a></li>
+      <li><a class="menu__item" href="./DeFi.html">🪐 Current Projects</a></li>
+      <li><a class="menu__item" href="./ScheduleACall.html">🏄‍♂️ Schedule a Call</a></li>
+      <li><a class="menu__item" href="mailto:hello@Blockspector.io?subject=Blockspector.io%20Email%20request">✉️ Email</a></li>
+      <li><a class="menu__item" href="https://www.blockspector.io/">🌍 Home</a></li>
+    </ul>
+  </div>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/100/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js'></script>
+
+ 
+
+   <div class="display-4 container-fluid d-flex justify-content-center hamburger-menu">
+    <display-4 class="hamburger-menu" style="color: #ffffff; z-index: 1; transform: translate(0px, 49px); margin-top: 69px; "> Ai Revolution</display-4>
+    </div>  
+    <div class="display-5 container-fluid d-flex justify-content-center bigText">
+      <display-5 class="bigText" style="color: #ffffff; z-index: 1;transform: translate(0px, 74px); "> Ai Revolution</display-4>
+      </div>  
+ 
+  
+
+        <!-- <div class="d-flex justify-content-center"data-aos="fade-down"  data-aos-duration="600" data-aos-once="false" data-aos-offset="330">
+      <iframe 
+      src="./trippyColour.html" 
+      style="border:none; transform: translate(0px, 0px);" name="TrippyColour" scrolling="no" 
+      frameborder="0" marginheight="0px" marginwidth="0px" 
+      height="400px" 
+      width="400px"
+      >
+    </iframe>
+    </div> -->
+
+    <div class=" hamburger-menu justify-content-center"></div>
+    <div class="hamburger-menu d-flex justify-content-center"data-aos="fade-up"  data-aos-duration="600" data-aos-once="false" data-aos-offset="330">
+      <div id="result-iframe-wrap" role="main" style="
+    
+      height: 400px;
+    ">
+        <iframe id="result" class="hamburger-menu " scrolling="no" srcdoc="<!DOCTYPE html>
+    <html lang=&quot;en&quot; >
+    
+    <head>
+      <meta charset=&quot;UTF-8&quot;>
+      
+    
+    
+        <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+    
+    
+    
+    
+    
+      
+      <title>CodePen - Can get trippy. 3D plotting</title>
+        <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/2Mogs/pen/gOwoEpP&quot; />
+      
+      
+      
+      
+    <style>
+    html {
+      font-size: 62.5%;
+    }
+    
+    body {
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    body .todo {
+      color: #ccc;
+      display: none;
+    }
+    
+    canvas {
+      display: block;
+      height: 319px;
+      text-align: center;
+     
+    }
+    
+    .ui {
+      margin: 0;
+      max-width: 600px;
+    }
+    .ui h2 {
+      font-size: 1.6rem;
+      margin-bottom: 2px;
+    }
+    .ui h2 span {
+      font-weight: normal;
+    }
+    .ui label {
+      margin-left: 0px;
+    }
+    .ui label:first-of-type {
+      margin-left: 0;
+    }
+    .ui input.slider {
+      width: 100%;
+    }
+    </style>
+    
+      <script>
+      window.console = window.console || function(t) {};
+    </script>
+    
+      
+      
+    </head>
+    
+    <body translate=&quot;no&quot;>
+      <canvas id=&quot;paper&quot;></canvas>
+    
+    <div class=&quot;ui&quot;>
+        <h2>Select a shape:</h2>
+        <label>Bowtie<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;bowtie&quot; checked=&quot;checked&quot;></label>
+        <label>Orchid<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;orchid&quot;></label>
+        <label>Hexatorus<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;hexatorus&quot;>
+        
+        <h2>Colour cycle speed <span>(min = off)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;colourSpeed&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; step=&quot;0.1&quot;>
+        
+        <h2>Blur <span>(max = off)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;blur&quot; type=&quot;range&quot; min=&quot;0.01&quot; max=&quot;0.5&quot; step=&quot;0.01&quot;>
+        
+        <h2>Rotation speed <span>(<< < ~ > >>)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;rotationSpeed&quot; type=&quot;range&quot; min=&quot;-.2&quot; max=&quot;.2&quot; step=&quot;0.01&quot;>
+        
+        <div class=&quot;todo&quot;>
+            <h2>(Todo) Interactive / auto rotation:</h2>
+            <label>Interactive<input disabled class=&quot;rotations&quot; type=&quot;radio&quot; name=&quot;rotation&quot; value=&quot;0&quot;></label>
+            <label>Auto<input class=&quot;rotations&quot; type=&quot;radio&quot; name=&quot;rotation&quot; value=&quot;1&quot; checked=&quot;checked&quot;></label>
+        </div>
+    </div
+        <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;></script>
+    
+      
+          <script id=&quot;rendered-js&quot; >
+    // Original 3D plotting from Marina
+    // https://codepen.io/riabets-m/pen/poEbVzX
+    
+    let canvas = document.querySelector('#paper'),
+    c = canvas.getContext('2d'),
+    size,
+    sqrt2 = Math.sqrt(2),
+    pi = Math.PI,
+    step = Math.PI / 20,
+    centerX,
+    centerY,
+    rotX = rotY = 0,
+    perspective = 220,
+    scale = 35,
+    zDepth = 90,
+    depth,
+    currX,currY,
+    x,y,z,
+    posX,posY,posZ,
+    TWO_PI = Math.PI * 2,
+    pi23 = 2 * Math.PI / 3,
+    verts = [],
+    numVerts,
+    shape = 'bowtie',
+    colour = 200,
+    alpha = 0.02,
+    colourSpeed = 1.5,
+    rotationSpeed = 0.02;
+    
+    const msin = Math.sin;
+    const mcos = Math.cos;
+    const mabs = Math.abs;
+    const mpow = Math.pow;
+    
+    size = canvas.height = canvas.width = 400;
+    centerX = centerY = size * 0.5;
+    
+    c.fillStyle = `rgba(0,0,0,${alpha})`;
+    
+    function point3d(x, y, z) {
+      let cosX = mcos(rotX),
+      cosY = mcos(rotY),
+      sinX = msin(rotX),
+      sinY = msin(rotY);
+    
+      posZ = z * cosX - x * sinX;
+      posX = z * sinX + x * cosX;
+      posY = y * cosY - posZ * sinY;
+      posZ = y * sinY + posZ * cosY;
+      depth = 1 / (posZ / perspective + 1);
+    
+      currX = posX * depth + centerX;
+      currY = posY * depth + centerY;
+    }
+    
+    const generatePoints = () => {
+      verts = [];
+      for (let u = -pi; u < pi; u += step) {
+        for (let v = -pi; v < pi; v += step) {
+          let px, py, pz;
+          switch (shape) {
+            case 'hexatorus':
+              px = msin(u) / mabs(sqrt2 + mcos(v));
+              py = msin(u + pi23) / mabs(sqrt2 + mcos(v + pi23));
+              pz = mcos(u - pi23) / mabs(sqrt2 + mcos(v - pi23));
+              verts.push(px * scale);
+              verts.push(py * scale);
+              verts.push(pz * scale);
+              break;
+            case 'bowtie':
+              px = msin(u) / mabs(sqrt2 + mcos(v));
+              py = msin(u * 2) / mabs(sqrt2 + msin(v));
+              pz = mcos(u) / mabs(sqrt2 + 1);
+              verts.push(px * scale);
+              verts.push(py * scale);
+              verts.push(pz * zDepth);
+              break;
+            case 'orchid':
+              px = 4 * mpow(msin(v), 3);
+              py = (.6 * mcos(v) -
+              5 * mcos(2 * v) -
+              2 * mcos(3 * v) -
+              mcos(u * 2)) * -1;
+              pz = mcos(u - pi23) / mabs(sqrt2 + mcos(v - pi23) * 3) * 0.5;
+              verts.push(px * scale * .3);
+              verts.push(py * scale * .3);
+              verts.push(pz * scale * .3);
+              break;}
+    
+        }
+        numVerts = verts.length;
+      }
+    };
+    
+    // UI
+    let radioSet = [...document.querySelectorAll('.shapes')];
+    for (let i = 0; i < radioSet.length; i++) {
+      radioSet[i].addEventListener('change', e => {
+        shape = document.querySelector('input[name=&quot;shape&quot;]:checked').value;
+        generatePoints();
+      });
+    }
+    let colSpeedInput = document.querySelector('#colourSpeed');
+    colSpeedInput.value = colourSpeed;
+    colSpeedInput.oninput = e => colourSpeed = Number(e.target.value);
+    
+    let rotSpeedInput = document.querySelector('#rotationSpeed');
+    rotSpeedInput.value = rotationSpeed;
+    rotSpeedInput.oninput = e => rotationSpeed = Number(e.target.value);
+    
+    let blurInput = document.querySelector('#blur');
+    blurInput.value = alpha;
+    blurInput.oninput = e => {
+      alpha = Number(e.target.value);
+      c.fillStyle = `rgba(0,0,0,${alpha})`;
+    };
+    
+    const animate = () => {
+      c.fillRect(0, 0, size, size);
+      c.beginPath();
+    
+      rotX += rotationSpeed;
+      rotY += rotationSpeed;
+      colour += colourSpeed;
+    
+      for (let i = 0; i < numVerts; i += 3) {
+        point3d(verts[i], verts[i + 1], verts[i + 2]);
+        c.lineTo(currX, currY);
+      }
+      c.strokeStyle = `hsl(${colour},80%,50%)`;
+      c.stroke();
+    
+      requestAnimationFrame(animate);
+    };
+    
+    generatePoints();
+    animate();
+    //# sourceURL=pen.js
+        </script>
+    
+      
+    </body>
+    
+    </html>
+    " sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe" style="
+      width: 541px;
+      height: 300px;
+      padding-left: 25px;
+      border-color: #ffffff00;
+    ">
+          </iframe>
+      </div>
+    </div>
+
+
+    <div class=" bigText justify-content-center"></div>
+    <div class=" bigText d-flex justify-content-center"data-aos="fade-up"  data-aos-duration="600" data-aos-once="false" data-aos-offset="330">
+      <div id="result-iframe-wrap" role="main" style="
+
+      height: 400px;
+  ">
+        <iframe id="result" class="bigText" scrolling="no" srcdoc="<!DOCTYPE html>
+    <html lang=&quot;en&quot; >
+    
+    <head>
+      <meta charset=&quot;UTF-8&quot;>
+      
+    
+    
+        <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+    
+    
+    
+    
+    
+      
+      <title>CodePen - Can get trippy. 3D plotting</title>
+        <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/2Mogs/pen/gOwoEpP&quot; />
+      
+      
+      
+      
+    <style>
+    html {
+      font-size: 62.5%;
+    }
+    
+    body {
+      background: #000;
+      color: #fff;
+      font-family: sans-serif;
+      font-size: 1.4rem;
+      margin: 0;
+    }
+    body .todo {
+      color: #ccc;
+      display: none;
+    }
+    
+    canvas {
+      display: block;
+      height: 400px;
+      text-align: center;
+     
+    }
+    
+    .ui {
+      margin: 0;
+      max-width: 600px;
+    }
+    .ui h2 {
+      font-size: 1.6rem;
+      margin-bottom: 2px;
+    }
+    .ui h2 span {
+      font-weight: normal;
+    }
+    .ui label {
+      margin-left: 0px;
+    }
+    .ui label:first-of-type {
+      margin-left: 0;
+    }
+    .ui input.slider {
+      width: 100%;
+    }
+    </style>
+    
+      <script>
+      window.console = window.console || function(t) {};
+    </script>
+    
+      
+      
+    </head>
+    
+    <body translate=&quot;no&quot;>
+      <canvas id=&quot;paper&quot;></canvas>
+    
+    <div class=&quot;ui&quot;>
+        <h2>Select a shape:</h2>
+        <label>Bowtie<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;bowtie&quot; checked=&quot;checked&quot;></label>
+        <label>Orchid<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;orchid&quot;></label>
+        <label>Hexatorus<input class=&quot;shapes&quot; type=&quot;radio&quot; name=&quot;shape&quot; value=&quot;hexatorus&quot;>
+        
+        <h2>Colour cycle speed <span>(min = off)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;colourSpeed&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;3&quot; step=&quot;0.1&quot;>
+        
+        <h2>Blur <span>(max = off)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;blur&quot; type=&quot;range&quot; min=&quot;0.01&quot; max=&quot;0.5&quot; step=&quot;0.01&quot;>
+        
+        <h2>Rotation speed <span>(<< < ~ > >>)</span>:</h2>
+        <input class=&quot;slider&quot; id=&quot;rotationSpeed&quot; type=&quot;range&quot; min=&quot;-.2&quot; max=&quot;.2&quot; step=&quot;0.01&quot;>
+        
+        <div class=&quot;todo&quot;>
+            <h2>(Todo) Interactive / auto rotation:</h2>
+            <label>Interactive<input disabled class=&quot;rotations&quot; type=&quot;radio&quot; name=&quot;rotation&quot; value=&quot;0&quot;></label>
+            <label>Auto<input class=&quot;rotations&quot; type=&quot;radio&quot; name=&quot;rotation&quot; value=&quot;1&quot; checked=&quot;checked&quot;></label>
+        </div>
+    </div
+        <script src=&quot;https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js&quot;></script>
+    
+      
+          <script id=&quot;rendered-js&quot; >
+    // Original 3D plotting from Marina
+    // https://codepen.io/riabets-m/pen/poEbVzX
+    
+    let canvas = document.querySelector('#paper'),
+    c = canvas.getContext('2d'),
+    size,
+    sqrt2 = Math.sqrt(2),
+    pi = Math.PI,
+    step = Math.PI / 20,
+    centerX,
+    centerY,
+    rotX = rotY = 0,
+    perspective = 220,
+    scale = 35,
+    zDepth = 90,
+    depth,
+    currX,currY,
+    x,y,z,
+    posX,posY,posZ,
+    TWO_PI = Math.PI * 2,
+    pi23 = 2 * Math.PI / 3,
+    verts = [],
+    numVerts,
+    shape = 'bowtie',
+    colour = 200,
+    alpha = 0.02,
+    colourSpeed = 1.5,
+    rotationSpeed = 0.02;
+    
+    const msin = Math.sin;
+    const mcos = Math.cos;
+    const mabs = Math.abs;
+    const mpow = Math.pow;
+    
+    size = canvas.height = canvas.width = 400;
+    centerX = centerY = size * 0.5;
+    
+    c.fillStyle = `rgba(0,0,0,${alpha})`;
+    
+    function point3d(x, y, z) {
+      let cosX = mcos(rotX),
+      cosY = mcos(rotY),
+      sinX = msin(rotX),
+      sinY = msin(rotY);
+    
+      posZ = z * cosX - x * sinX;
+      posX = z * sinX + x * cosX;
+      posY = y * cosY - posZ * sinY;
+      posZ = y * sinY + posZ * cosY;
+      depth = 1 / (posZ / perspective + 1);
+    
+      currX = posX * depth + centerX;
+      currY = posY * depth + centerY;
+    }
+    
+    const generatePoints = () => {
+      verts = [];
+      for (let u = -pi; u < pi; u += step) {
+        for (let v = -pi; v < pi; v += step) {
+          let px, py, pz;
+          switch (shape) {
+            case 'hexatorus':
+              px = msin(u) / mabs(sqrt2 + mcos(v));
+              py = msin(u + pi23) / mabs(sqrt2 + mcos(v + pi23));
+              pz = mcos(u - pi23) / mabs(sqrt2 + mcos(v - pi23));
+              verts.push(px * scale);
+              verts.push(py * scale);
+              verts.push(pz * scale);
+              break;
+            case 'bowtie':
+              px = msin(u) / mabs(sqrt2 + mcos(v));
+              py = msin(u * 2) / mabs(sqrt2 + msin(v));
+              pz = mcos(u) / mabs(sqrt2 + 1);
+              verts.push(px * scale);
+              verts.push(py * scale);
+              verts.push(pz * zDepth);
+              break;
+            case 'orchid':
+              px = 4 * mpow(msin(v), 3);
+              py = (.6 * mcos(v) -
+              5 * mcos(2 * v) -
+              2 * mcos(3 * v) -
+              mcos(u * 2)) * -1;
+              pz = mcos(u - pi23) / mabs(sqrt2 + mcos(v - pi23) * 3) * 0.5;
+              verts.push(px * scale * .3);
+              verts.push(py * scale * .3);
+              verts.push(pz * scale * .3);
+              break;}
+    
+        }
+        numVerts = verts.length;
+      }
+    };
+    
+    // UI
+    let radioSet = [...document.querySelectorAll('.shapes')];
+    for (let i = 0; i < radioSet.length; i++) {
+      radioSet[i].addEventListener('change', e => {
+        shape = document.querySelector('input[name=&quot;shape&quot;]:checked').value;
+        generatePoints();
+      });
+    }
+    let colSpeedInput = document.querySelector('#colourSpeed');
+    colSpeedInput.value = colourSpeed;
+    colSpeedInput.oninput = e => colourSpeed = Number(e.target.value);
+    
+    let rotSpeedInput = document.querySelector('#rotationSpeed');
+    rotSpeedInput.value = rotationSpeed;
+    rotSpeedInput.oninput = e => rotationSpeed = Number(e.target.value);
+    
+    let blurInput = document.querySelector('#blur');
+    blurInput.value = alpha;
+    blurInput.oninput = e => {
+      alpha = Number(e.target.value);
+      c.fillStyle = `rgba(0,0,0,${alpha})`;
+    };
+    
+    const animate = () => {
+      c.fillRect(0, 0, size, size);
+      c.beginPath();
+    
+      rotX += rotationSpeed;
+      rotY += rotationSpeed;
+      colour += colourSpeed;
+    
+      for (let i = 0; i < numVerts; i += 3) {
+        point3d(verts[i], verts[i + 1], verts[i + 2]);
+        c.lineTo(currX, currY);
+      }
+      c.strokeStyle = `hsl(${colour},80%,50%)`;
+      c.stroke();
+    
+      requestAnimationFrame(animate);
+    };
+    
+    generatePoints();
+    animate();
+    //# sourceURL=pen.js
+        </script>
+    
+      
+    </body>
+    
+    </html>
+    " sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe" style="
+      width: 541px;
+      height: 300px;
+      padding-left: 25px;
+      border-color: #ffffff00;
+  ">
+          </iframe>
+      </div>
+</div>
+
+
+
+
+    <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
+      <a style="
+      background-color: #005cff;
+      border-radius: 31px;
+      font-size: 16px;
+      height: 40px;
+      transform: translate(0px, 0px);
+      " href="./DeFi.html" class="btn btn-primary btn-lg active" role="button"> Get Started
+      </a>        
+      </div>
+
+
+
+
+
+    <div class="d-flex justify-content-center bd-highlight mb-3 hamburger-menu ">
+      <li class="hamburger-menu text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+      style="color: #0052ff;
+      font-weight: 500;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-left: auto;
+      transform: translate(0px, -98px);
+      
+      ">Ai Upload</li>
+      </div>
+
+
+
+
+      <div class="d-flex justify-content-center bd-highlight mb-3 bigText">
+        <li class="bigText text-sm mr-2 px-2 border2001 rounded-full list-unstyled" 
+        style="color: #0052ff;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        transform: translate(0px, -115px);
+        
+        ">Ai Upload</li>
+        
+        
+        </div>
+
+
+        <div class="container7Header">
+          <p class="container-fluid d-flex justify-content-center align-items-center" style="
+          color: #ffffff;margin: 30px;
+          text-align:center;
+            margin-left: auto;
+          margin-right: auto;
+          margin-bottom: 0px;
+          width: 80%;
+          font-size: 1.5rem
+          ">
+   Upload & Ask, easily get key insights on your data.
+        
+             </p>
+             </div>
+
+
+              <!-- -------------⚠️----- Safe Scaleable Secure DESKTOP 🖥️  ---------⚠️--------------->
+              <div class="container8 container-fluid d-flex justify-content-center">
+
+                         
+                                  
+                <div class="container8 d-flex justify-content-center bigText"
+                style="
+                margin-top: 30px;
+            
+              
+                ">
+                  <div class="bigText" class="BRCobane-Medium" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="250" class="p-2 bd-highlight"><h1   style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 4.4rem !important; ">The </h1></div>
+                  <div class="bigText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="260" class="p-2 bd-highlight"><h1 style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 4.4rem !important; ">De-Fi </h1></div>
+                  <div class="bigText" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="280" class="p-2 bd-highlight"><h1 style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 4.4rem !important;">Wallet You Want 
+                  </h1>
+                  <pre></pre>
+                      </div>
+          
+                  <div class="bigText" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="350" class="p-2 bd-highlight"><h3 style="
+                    text-align: left;
+                    margin: auto;
+                    width: 74.2%;
+                    line-height: 150%;
+                    font-size: 1.3rem !important;
+                    font-family: BRcobane-Medium;
+                    ">   
+                    <!-- Secure by design via <span style="color: #004EFC;"> Blockchain technology.</span>  -->
+                    Interacting with De-Fi<span style="color: #004EFC;"> made easy.</span>
+                    De-Fi Flow is an intuitive savings management tool that makes interacting with De-Fi protocols easy and accessible. 
+                    Compare different De-Fi tokens and watch your savings grow.
+                     All in an intuitive app. 
+                    </h3>
+               <pre></pre>
+                    </div>
+                </div>
+
+
+                <!-- ---☎️  ⚠️---------- Safe Scaleable Secure 2 hamburger-menu Hiiden for Desktop. ☎️  ⚠️  ------------------------->
+                        
+                <div class="container8 d-flex justify-content-center hamburger-menu"
+                style="
+                margin-top: 0px;
+            
+              
+                ">
+                  <div class="hamburger-menu" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="50" class="p-2 bd-highlight"><h1   style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 2rem !important;
+                   ">The 
+                   </h1> </div>
+                  <div class="hamburger-menu" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="80" class="p-2 bd-highlight"><h1 style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 2rem !important; ">De-Fi </h1></div>
+                  <div class="hamburger-menu" data-aos="fade-up" data-aos-duration="600" data-aos-once="true" data-aos-offset="110" class="p-2 bd-highlight"><h1 style="
+                  text-align: left;
+                  margin: auto;
+                  width: 75%;
+                    font-size: 2rem !important;">Wallet You Want 
+                  </h1>
+                <pre></pre>
+                      </div>
+                  <div class="hamburger-menu" data-aos="fade" data-aos-duration="600" data-aos-once="true" data-aos-offset="210" class="p-2 bd-highlight"><h3 style="
+                    text-align: left;
+                    margin: auto;
+                    width: 74.2%;
+                    line-height: 150%;
+                      font-size: 1.3rem !important;"> Interacting with De-Fi<span style="color: #004EFC;"> made easy.</span>
+                       De-Fi Flow is an intuitive savings management tool that makes interacting with De-Fi protocols easy and accessible. 
+                       Compare different De-Fi tokens and watch your savings grow.
+                        All in an intuitive app. 
+                    </h3>
+
+               <pre></pre>
+                    </div>
+                </div>          
+     
+
+
+  </div>
+
+     
+
+
+
+    <!-- End of Section A   -->
+
+ <!--🔴 🛑 Script for AOS Do not move! 🛑 🔴 -->
+      <script src="./aos.js"></script>
+      <script>
+        AOS.init({
+          duration: 3000,
+          once: true,
+        });
+      </script>
+
+<!-- THIS IS A SMALL FOOTER UNDERNEATH THE MAIN FOOTER -->
+
+    
+        
+    
