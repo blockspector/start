@@ -64,7 +64,7 @@
   --bs-navbar-color: rgb(0, 0, 0) !important;
   background-color: rgb(255 255 255 / 46%);
   border: 1.2px solid rgb(180 180 180 / 69%);
-  width: 724px;
+  width: 577px;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   font-weight: 500;
@@ -155,10 +155,8 @@
   background-color: rgb(255, 255, 255,);
 }
 body{
-  /* background-image: url(../blueMedium.png); */
-  /* background-image: url(../bueg2.jpg); */
-  /* Below is 41KB version of the same image */
-   background-image: url(../bueg2Large.jpeg); 
+
+background-color: #ffffff;
 
   background-size:100% auto; 
   background-repeat: no-repeat;
@@ -463,13 +461,19 @@ column-span: all;
 
 .btn > a:hover {
   font-size: 16px !important;
-  background-color: #3b83ff !important; 
+  background-color: #009572 !important;
+  color: #000;
 }
 .btn-primary:hover {
-background-color: #033bd5 !important; 
-border: #005cff 1px solid !important;
+background-color: #0fd3a5 !important;
+border-color: #009572 !important;
 transition: 0.3s;
+
 } 
+
+.btn.active {border-color: #128065 !important;
+
+}
 
 .btn2 > a:hover {
   font-size: 16px !important;
