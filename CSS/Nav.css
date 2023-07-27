@@ -63,14 +63,14 @@
 .navbar-nav{
   --bs-navbar-color: rgb(0, 0, 0) !important;
   background-color: rgb(255 255 255 / 46%);
-  border: 1.2px solid rgb(180 180 180 / 69%);
-  width: 577px;
+  border-bottom: 1.2px solid rgb(180 180 180 / 69%);
+  width: 100%;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
   font-weight: 500;
   position: sticky;
-  margin-top: 10px;
-  border-radius: 31px;
+  margin-top: 0px;
+  /* border-radius: 31px; */
   padding-top: 5px;
   top: 0;
 
@@ -257,17 +257,18 @@ backdrop-filter: blur(5px);
   transform: rotate(90deg);
 }
 #menu__toggle:checked ~ .menu__box {
-  left: 0 !important;
+  right: 0 !important;
 }
 .menu__btn {
   position: fixed;
-  top: 40px;
-  left: 30px;
+  top: 32px;
+  left: 90%;
   width: 26px;
   height: 26px;
   cursor: pointer;
   z-index: 99;
 }
+
 .menu__btn > span,
 .menu__btn > span::before,
 .menu__btn > span::after {
@@ -275,7 +276,7 @@ backdrop-filter: blur(5px);
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #1B3EB3;
+  background-color: #000000;
   transition-duration: .25s;
 }
 /* Top bar of hamburger menu positioning?  */ 
@@ -297,7 +298,7 @@ backdrop-filter: blur(5px);
   margin-right: auto;
   position: fixed;
   top: 0;
-  left: -100%;
+  right: -100%;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -317,8 +318,10 @@ backdrop-filter: blur(5px);
 
 .menu__item {
   display: block;
-  margin-left: auto; 
+  justify-content: revert;
+  margin-left: auto;
   margin-right: auto;
+  display: table;
   padding: 12px 20px;
   color: rgb(0, 0, 0);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -326,8 +329,9 @@ backdrop-filter: blur(5px);
   font-size: 27px;
   text-decoration: none;
   transition-duration: .25s;
-  --bs-link-hover-color: #1e00ff; /* new local variable */
+  --bs-link-hover-color: #1e00ff;
 }
+
 /*Hamburger menu to CSS page*/ 
 
 .m-2 { 
@@ -444,8 +448,8 @@ column-span: all;
 
 
 .hamnavWhite {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgb(210 210 210 / 27%);
+  background-color: rgba(255, 255, 255, 0.81);
+  border-bottom: 1px solid rgb(210 210 210 / 61%);
   width: 100%;
   backdrop-filter: blur(9px);
   -webkit-backdrop-filter: blur(9px);
@@ -457,23 +461,18 @@ column-span: all;
  justify-content: center;
  display: flex;
   z-index: 1;
+  height: 65px;
 }
 
 .btn > a:hover {
   font-size: 16px !important;
-  background-color: #009572 !important;
-  color: #000;
+  background-color: #3b83ff !important; 
 }
 .btn-primary:hover {
-background-color: #0fd3a5 !important;
-border-color: #009572 !important;
+background-color: #033bd5 !important; 
+border: #005cff 1px solid !important;
 transition: 0.3s;
-
 } 
-
-.btn.active {border-color: #128065 !important;
-
-}
 
 .btn2 > a:hover {
   font-size: 16px !important;
@@ -484,7 +483,6 @@ background-color: #07b1d3 !important;
 border: #005cff 1px solid !important;
 transition: 0.3s;
 } 
-
 
 
  @import "../node_modules/bootstrap/scss/variables";
