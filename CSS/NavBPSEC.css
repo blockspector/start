@@ -439,7 +439,7 @@ column-span: all;
 
 
 .display-4 {
-  font-size: calc(2.7rem + 2vw) !important;
+  font-size: calc(1.7rem + 2vw) !important;
   font-weight: 300;
   line-height: 1.2;
   }
